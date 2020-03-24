@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Аленчик](https://up.htmlacademy.ru/adaptive/19/user/1329281).
-* Наставник: [Ирина Фролова]
+* Наставник: [Ирина Фролова](https://htmlacademy.ru/profile/id1043867)
 
 ---
 
