@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="main-nav">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a href="photo.html">Фото и видео</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Форма отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logotyle-mobile.svg" width="102" height="83" alt="Седона">
+    </a>
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+  </header>
+  <main class="photo-main">
+    <h1 class="visiully-hidden">Фотографии и видео Седоны</h1>
+    <img class="photo-main__back-image--back" src="img/back-mobile.png" alt="">
+    <img class="photo-main__back-image--text" src="img/text-index.png" alt="">
+    <section class="photo-sample">
+      <h2 class="photo-sample__title">Фото и видео</h2>
+      <p class="photo-sample__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <ul class="photo-sample__list ">
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-1-mobile.png" width="280" height="280" alt="Фотография Неродные просторы ">
+          <p class="sample-item__text sample-item__text--tytle">Неродные просторы</p>
+          <p class="sample-item__text">Автор фото: Борис</p>
+          <p class="sample-item__text sample-item__text--count">1350</p>
+          <!--здесь непонятно, лайки же должны считаться, но поставила как параграф-->
+        </li>
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-2-mobile.png" width="280" height="280" alt="Фотография Местная растительность ">
+          <p class="sample-item__text sample-item__text--tytle">Местная растительность</p>
+          <p class="sample-item__text"> Автор фото: Сергей</p>
+          <p class="sample-item__text sample-item__text--count">143</p>
+        </li>
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-3-mobile.png" width="280" height="280" alt="Фотография Дорога на север ">
+          <p class="sample-item__text sample-item__text--tytle">Дорога на север</p>
+          <p class="sample-item__text"> Автор фото: Петр</p>
+          <p class="sample-item__text sample-item__text--count">96</p>
+        </li>
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-4-mobile.png" width="280" height="280" alt="Фотография Мост дьявола">
+          <p class="sample-item__text sample-item__text--tytle">Мост дьявола</p>
+          <p class="sample-item__text"> Автор фото: Антон</p>
+          <p class="sample-item__text sample-item__text--count">254</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <!--здесь блок отмечен красным, пока не размечаем-->
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="footer__link" href="#">#VisitSedona</a>
+    <div class="footer__wrapper social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href="#" title="Наша страница на Twitter"></a>
+        </li>
+        <li class="social__item">
+          <a  class="social__link" href="#" title="Наша страница в Facebook"></a>
+        </li>
+        <li class="social__item">
+          <a  class="social__link" href="#" title="Наша страница на YouTube"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__wrapper developer">
+      <a class="developer__link" href="#">Разработано</a>
+    </div>
+  </footer>
+</body>
+</html>
