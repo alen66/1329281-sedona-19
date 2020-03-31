@@ -34,35 +34,31 @@
     <section class="photo-sample">
       <h2 class="photo-sample__title">Фото и видео</h2>
       <p class="photo-sample__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-      <ul class="photo-sample__list sample-list">
-        <li class="sample-list__items">
-          <figure class="sample-list__figure">
-            <img class="sample-list__img" src="img/photo-1-mobile.png" width="280" height="280">
-            <figcaption class="sample-list__sign"><span class="sample-list__span">Неродные просторы</span>Автор фото: Борис</figcaption>
-          </figure>
-          <p class="sample-liste__text">1350</p>
+      <ul class="photo-sample__list ">
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-1-mobile.png" width="280" height="280" alt="Фотография Неродные просторы ">
+          <p class="sample-item__text sample-item__text--tytle">Неродные просторы</p>
+          <p class="sample-item__text">Автор фото: Борис</p>
+          <p class="sample-item__text sample-item__text--count">1350</p>
  <!--здесь непонятно, лайки же должны считаться, но поставила как параграф-->
         </li>
-        <li class="sample-list__items">
-          <figure class="sample-list__figure">
-            <img class="sample-list__img" src="img/photo-2-mobile.png" width="280" height="280">
-            <figcaption class="sample-list__sign"><span class="sample-list__span">Местная растительность</span>Автор фото: Сергей</figcaption>
-          </figure>
-          <p class="sample-list__text">143</p>
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-2-mobile.png" width="280" height="280" alt="Фотография Местная растительность ">
+          <p class="sample-item__text sample-item__text--tytle">Местная растительность</p>
+          <p class="sample-item__text"> Автор фото: Сергей</p>
+          <p class="sample-item__text sample-item__text--count">143</p>
         </li>
-         <li class="sample-list__items">
-          <figure class="sample-list__figure">
-            <img class="sample-list__img" src="img/photo-3-mobile.png" width="280" height="280">
-            <figcaption class="sample-list__sign"><span class="sample-list__span">Дорога на север</span>Автор фото: Петр</figcaption>
-         </figure>
-          <p class="sample-list__text">96</p>
+        <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-3-mobile.png" width="280" height="280" alt="Фотография Дорога на север ">
+          <p class="sample-item__text sample-item__text--tytle">Дорога на север</p>
+          <p class="sample-item__text"> Автор фото: Петр</p>
+          <p class="sample-item__text sample-item__text--count">96</p>
         </li>
-         <li class="sample-list__items">
-          <figure class="sample-list__figure">
-            <img class="sample-list__img" src="img/photo-4-mobile.png" width="280" height="280">
-            <figcaption class="sample-list__sign"><span class="sample-list__span">Мост дьявола</span>Автор фото: Антон</figcaption>
-          </figure>
-          <p class="sample-list__text">254</p>
+         <li class="sample-item">
+          <img class="sample-item__img" src="img/photo-4-mobile.png" width="280" height="280" alt="Фотография Мост дьявола">
+          <p class="sample-item__text sample-item__text--tytle">Мост дьявола</p>
+          <p class="sample-item__text"> Автор фото: Антон</p>
+          <p class="sample-item__text sample-item__text--count">254</p>
         </li>
       </ul>
     </section>
@@ -70,23 +66,24 @@
       <!--здесь блок отмечен красным, пока не размечаем-->
     </section>
   </main>
-  <footer class="footer">
-   <h2 class="footer__title">#visitsedona</h2>
-    <div class="social__wrapper">
+ <footer class="footer">
+  <a class="footer__link" href="#">#VisitSedona</a>
+    <div class="footer__wrapper social">
       <ul class="social__list">
         <li class="social__item">
-          <a  href="#" title=""></a>
+          <a class="social__link" href="#" title="Наша страница на Twitter"></a>
         </li>
         <li class="social__item">
-          <a   href="#" title=""></a>
+          <a  class="social__link" href="#" title="Наша страница в Facebook"></a>
         </li>
         <li class="social__item">
-          <a  href="#" title=""></a>
+          <a  class="social__link" href="#" title="Наша страница на YouTube"></a>
         </li>
       </ul>
     </div>
-  <p class="footer__p">Разработано</p>
-</footer>
+    <div class="footer__wrapper developer">
+    <a class="developer__link" href="#">Разработано</a>
+    </div>
+ </footer>
 </body>
 </html>
-
