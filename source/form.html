@@ -28,7 +28,7 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
   </header>
   <main class="form-main">
-    <h1 class="visiully-hidden">Фотографии и видео Седоны</h1>
+    <h1 class="visiully-hidden">Отзыв об отелях в Седоне</h1>
     <img class="form-main__back-image--back" src="img/back-mobile.png" alt="">
     <img class="form-main__back-image--text" src="img/text-index.png" alt="">
     <section class="feedback">
@@ -39,11 +39,11 @@
     <fieldset class="response__user">
     <legend class="response__legend">Представьтесь</legend>
       <label class="response__label" for="firstname">Имя:*</label>
-      <input type="text" name="firstname" id="firstname" placeholder="Имя" required="">
+      <input type="text" name="firstname" id="firstname" placeholder="Петр" required="">
       <label class="response__label" for="surname">Фамилия:*</label>
-      <input type="text" name="surname" id="surname" placeholder="Фамилия" required="">
+      <input type="text" name="surname" id="surname" placeholder="Иванов" required="">
       <label class="response__label" for="middlename">Отчество:</label>
-      <input type="text" name="middlename" id="middlename" placeholder="Отчество">
+      <input type="text" name="middlename" id="middlename" placeholder="Александрович">
     </fieldset>
     <fieldset class="response__contact">
       <legend class="response__legend">Контактная информация</legend>
@@ -63,17 +63,19 @@
     </fieldset>
     <fieldset class="response__place">
       <legend class="response__legend">Посещенные достопримечательности</legend>
-      <input type="checkbox" name="place" id="place1" checked>
+      <input type="checkbox" name="place1" id="place1" checked>
       <label class="response__label response__label--strong" for="place1">Мост Дьявола</label>
-      <input type="checkbox" name="place" id="place2" checked>
+      <input type="checkbox" name="place2" id="place2" checked>
       <label class="response__label response__label--strong" for="place2">Гора-Колокол</label>
-      <input type="checkbox" name="place" id="place3" checked>
+      <input type="checkbox" name="place3" id="place3" checked>
       <label class="response__label response__label--strong" for="place3">Слайд-парк</label>
-      <input type="checkbox" name="place" id="place4">
+      <input type="checkbox" name="place4" id="place4">
       <label class="response__label response__label--strong" for="place4">Красные скалы</label>
     </fieldset>
-    <label class="response__label response__label--strong" for="write">Опишите свои эмоции:</label>
-    <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
+    <fieldset class="response__write">
+      <legend class="response__legend">Опишите свои эмоции:</legend>
+      <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
+    </fieldset>
     <button class='response__btn' type="submit"  value="Отправить">Отправить</button>
     </form>
     </section>
