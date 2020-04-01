@@ -28,11 +28,56 @@
     <button class="main-nav__toggle" type="button">Открыть меню</button>
   </header>
   <main class="form-main">
-    <h1 class="visiully-hidden">Фотографии и видео Седоны</h1>
+    <h1 class="visiully-hidden">Отзыв об отелях в Седоне</h1>
     <img class="form-main__back-image--back" src="img/back-mobile.png" alt="">
     <img class="form-main__back-image--text" src="img/text-index.png" alt="">
     <section class="feedback">
-      <!--не размечаем-->
+    <h2 class="feedback__title">Оставьте свой отзыв</h2>
+    <p class="feedback__text">Помогите нашим отелям стать лучше!
+    Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
+    <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru">
+    <fieldset class="response__user">
+    <legend class="response__legend">Представьтесь</legend>
+      <label class="response__label" for="firstname">Имя:*</label>
+      <input type="text" name="firstname" id="firstname" placeholder="Петр" required="">
+      <label class="response__label" for="surname">Фамилия:*</label>
+      <input type="text" name="surname" id="surname" placeholder="Иванов" required="">
+      <label class="response__label" for="middlename">Отчество:</label>
+      <input type="text" name="middlename" id="middlename" placeholder="Александрович">
+    </fieldset>
+    <fieldset class="response__contact">
+      <legend class="response__legend">Контактная информация</legend>
+      <label class="response__label" for="phone">Контактный телефон:*</label>
+      <input type="tel" name="phone" id="phone" placeholder="Введите телефон" required="">
+      <label class="response__label" for="email">Электронная почта:*</label>
+      <input type="email" name="email" id="email" placeholder="Введите e-mail">
+    </fieldset>
+    <fieldset class="response__comment">
+      <legend class="response__legend">Ваше общее впечатление</legend>
+      <input type="radio" name="comment" id="comment1" checked>
+      <label class="response__label response__label--strong" for="comment1">Скорее положительное</label>
+      <input type="radio" name="comment" id="comment2" >
+      <label class="response__label response__label--strong" for="comment2">Скорее отрицательное</label>
+      <input type="radio" name="comment" id="comment3">
+      <label class="response__label response__label--strong" for="comment3">Затрудняюсь ответить</label>
+    </fieldset>
+    <fieldset class="response__place">
+      <legend class="response__legend">Посещенные достопримечательности</legend>
+      <input type="checkbox" name="place1" id="place1" checked>
+      <label class="response__label response__label--strong" for="place1">Мост Дьявола</label>
+      <input type="checkbox" name="place2" id="place2" checked>
+      <label class="response__label response__label--strong" for="place2">Гора-Колокол</label>
+      <input type="checkbox" name="place3" id="place3" checked>
+      <label class="response__label response__label--strong" for="place3">Слайд-парк</label>
+      <input type="checkbox" name="place4" id="place4">
+      <label class="response__label response__label--strong" for="place4">Красные скалы</label>
+    </fieldset>
+    <fieldset class="response__write">
+      <legend class="response__legend">Опишите свои эмоции:</legend>
+      <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
+    </fieldset>
+    <button class='response__btn' type="submit"  value="Отправить">Отправить</button>
+    </form>
     </section>
   </main>
   <footer class="footer">
