@@ -4,8 +4,8 @@
 @font-urlBold: ptsansbold;
 
 .font(@fontName; @urlName; @weight: normal; @style: normal) {
-  font-family: "@{fontName}",sans-serif;
-  src: url("../fonts/@{urlName}.woff") format("woff"),url("../fonts/@{urlName}.woff2") format("woff2");
+  font-family: "@{fontName}", sans-serif;
+  src: url("../fonts/@{urlName}.woff") format("woff"), url("../fonts/@{urlName}.woff2") format("woff2");
   font-weight: @weight;
   font-style: @style;
 }
@@ -45,7 +45,7 @@
 }
 
 .height(@height) {
-  height: @height
+  height: @height;
 }
 
 .mg-auto() {
@@ -59,6 +59,7 @@
   padding-bottom: @bt;
   padding-left: @lf;
 }
+
 .visiully-hidden {
   visibility: hidden;
   padding: 0;
