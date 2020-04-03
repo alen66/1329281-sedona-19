@@ -2,12 +2,14 @@
 @fontBold: "@{fontRegular}-Bold";
 @font-url:ptsans;
 @font-urlBold: ptsansbold;
+
 .font(@fontName; @urlName; @weight: normal; @style: normal) {
   font-family: "@{fontName}",sans-serif;
   src: url("../fonts/@{urlName}.woff") format("woff"),url("../fonts/@{urlName}.woff2") format("woff2");
   font-weight: @weight;
   font-style: @style;
 }
+
 .font-base(@fontName;@fontSize;@font-height) {
   font-family: @fontName;
   font-size: @fontSize;
@@ -17,9 +19,11 @@
 @font-face {
   .font(@fontRegular;@font-url;);
 }
+
 @font-face {
   .font(@fontBold; @font-urlBold; bold;);
 }
+
 @blue:#81b3d2;
 @white: #ffffff;
 @dark-blue:#678fa8;
@@ -28,39 +32,42 @@
 @black:#000000;
 
 
-.bg-color(@color){
+.bg-color(@color) {
   background-color: @color;
 }
 
-.color(@color){
+.color(@color) {
   color: @color;
 }
-.width(@width){
+
+.width(@width) {
   width: @width;
 }
-.height(@height){
+
+.height(@height) {
   height: @height
 }
 
-.mg-auto(){
+.mg-auto() {
   margin: 0 auto;
-  padding:0;
-
+  padding: 0;
 }
-.pd(@tp:0;@rt:0;@bt:0;@lf:0){
+
+.pd(@tp:0;@rt:0;@bt:0;@lf:0) {
   padding-top: @tp;
   padding-right: @rt;
   padding-bottom: @bt;
   padding-left: @lf;
 }
-.visiully-hidden{
-  visibility:hidden;
+.visiully-hidden {
+  visibility: hidden;
   padding: 0;
   margin: 0;
   font-size: 0;
   line-height: 0;
 }
-body{
+
+body {
   .mg-auto();
   .width(@width);
   .bg-color(@white);
@@ -69,7 +76,7 @@ body{
   text-transform: uppercase;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
