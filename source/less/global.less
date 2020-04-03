@@ -1,7 +1,7 @@
 @fontRegular: "PT Sans";
 @fontBold: "@{fontRegular}-Bold";
 @font-url:ptsans;
-@font-urlBold:@{font-url}bold;
+@font-urlBold: ptsansbold;
 .font(@fontName; @urlName; @weight: normal; @style: normal) {
   font-family: "@{fontName}",sans-serif;
   src: url("../fonts/@{urlName}.woff") format("woff"),url("../fonts/@{urlName}.woff2") format("woff2");
