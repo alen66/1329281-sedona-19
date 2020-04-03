@@ -1,0 +1,71 @@
+@fontRegular: "PT Sans";
+@fontBold: "@{fontRegular}-Bold";
+@font-url:ptsans;
+@font-urlBold:@{font-url}bold;
+.font(@fontName; @urlName; @weight: normal; @style: normal) {
+  font-family: "@{fontName}",sans-serif;
+  src: url("../fonts/@{urlName}.woff") format("woff"),url("../fonts/@{urlName}.woff2") format("woff2");
+  font-weight: @weight;
+  font-style: @style;
+}
+
+
+@font-face {
+  .font(@fontRegular;@font-url;);
+}
+@font-face {
+  .font(@fontBold; @font-urlBold; bold;);
+}
+@blue:#81b3d2;
+@white: #ffffff;
+@font-size:18px;
+@line-height: 40px;
+@dark-blue:#678fa8;
+@light-blue:#9ac2db;
+@width: 320px;
+
+
+.bg-color(@color){
+  background-color: @color;
+}
+.fn-target(@color,@size,@lnh){
+  color: @color;
+  font-size:@size;
+  line-height: @lnh;
+}
+.color(@color){
+  color: @color;
+}
+.width(@width){
+  width: @width;
+}
+.mg-auto(){
+  margin: 0 auto;
+  padding:0;
+
+}
+.pd(@tp:0;@rt:0;@bt:0;@lf:0){
+  padding-top: @tp;
+  padding-right: @rt;
+  padding-bottom: @bt;
+  padding-left: @lf;
+}
+.visiully-hidden{
+  visibility:hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+body{
+  .mg-auto();
+  .width(@width);
+  .bg-color(@white);
+  text-transform: uppercase;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
