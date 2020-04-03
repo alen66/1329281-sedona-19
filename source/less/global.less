@@ -8,7 +8,11 @@
   font-weight: @weight;
   font-style: @style;
 }
-
+.font-base(@fontName;@fontSize;@font-height) {
+  font-family: @fontName;
+  font-size: @fontSize;
+  line-height: @font-height;
+}
 
 @font-face {
   .font(@fontRegular;@font-url;);
@@ -18,27 +22,26 @@
 }
 @blue:#81b3d2;
 @white: #ffffff;
-@font-size:18px;
-@line-height: 40px;
 @dark-blue:#678fa8;
 @light-blue:#9ac2db;
 @width: 320px;
+@black:#000000;
 
 
 .bg-color(@color){
   background-color: @color;
 }
-.fn-target(@color,@size,@lnh){
-  color: @color;
-  font-size:@size;
-  line-height: @lnh;
-}
+
 .color(@color){
   color: @color;
 }
 .width(@width){
   width: @width;
 }
+.height(@height){
+  height: @height
+}
+
 .mg-auto(){
   margin: 0 auto;
   padding:0;
@@ -61,6 +64,8 @@ body{
   .mg-auto();
   .width(@width);
   .bg-color(@white);
+  .font-base(@fontRegular;18px;40px);
+  .color(@black);
   text-transform: uppercase;
 }
 
