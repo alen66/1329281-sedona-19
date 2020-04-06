@@ -1,0 +1,28 @@
+.footer {
+  .bg-color(@white);
+  .mg-auto();
+  width: @width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__link {
+  .font-base(@fontBold; 21px; 26px);
+  text-decoration: none;
+  .color(@black);
+  padding-top: 42px;
+
+  &--developer {
+  .font-base(@fontRegular; 14px; 26px);
+  padding: 48px 20px 35px 20px;
+  }
+}
+
+.footer__wrapper {
+  margin-top: 40px;
+
+  &--developer {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,31 @@
+.main-nav {
+  .reset();
+  .bg-color(@blue);
+
+  ul {
+    .reset();
+  }
+
+  li {
+      list-style: none;
+    }
+
+  a {
+    .font-base(@fontBold;18px;40px);
+    text-decoration: none;
+    .color(@white);
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 7px 0 7px 0;
+  }
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: @width;
+  margin: 0 auto;
+  min-height: 225px;
+}
+

@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social__list {
+  display: flex;
+  flex-direction: row;
+  .reset();
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  .bg-color(@blue);
+  margin-right: 7px;
+}
+
+.social__item:nth-child(3) a{
+  margin-right: 0;
+}
