@@ -1,14 +1,19 @@
 .main-nav {
   .reset();
   .bg-color(@blue);
+  display: flex;
+  flex-direction: column;
+  width: @width;
+  margin: 0 auto;
+  min-height: 225px;
 
   ul {
     .reset();
   }
 
   li {
-      list-style: none;
-    }
+    list-style: none;
+  }
 
   a {
     .font-base(@fontBold;18px;40px);
@@ -19,12 +24,4 @@
     margin: 0 auto;
     padding: 7px 0 7px 0;
   }
-}
-
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  width: @width;
-  margin: 0 auto;
-  min-height: 225px;
 }
