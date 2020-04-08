@@ -1,0 +1,95 @@
+@fontRegular: "PT Sans";
+@fontBold: "@{fontRegular}";
+@font-url:ptsans;
+@font-urlBold: ptsansbold;
+
+.font(@fontName; @urlName; @weight: normal; @style: normal) {
+  font-family: "@{fontName}", sans-serif;
+  src: url("../fonts/@{urlName}.woff") format("woff"), url("../fonts/@{urlName}.woff2") format("woff2");
+  font-weight: @weight;
+  font-style: @style;
+}
+
+.font-base(@fontName;@fontSize;@font-height) {
+  font-family: @fontName;
+  font-size: @fontSize;
+  line-height: @font-height;
+}
+
+@font-face {
+  .font(@fontRegular;@font-url;);
+}
+
+@font-face {
+  .font(@fontBold; @font-urlBold; bold;);
+}
+
+@blue:#81b3d2;
+@white: #ffffff;
+@dark-blue:#678fa8;
+@light-blue:#9ac2db;
+@width: 320px;
+@tablet-width:768px;
+@desktop-width:1200px;
+@black:#000000;
+
+
+.reset() {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-color(@color) {
+  background-color: @color;
+}
+
+.color(@color) {
+  color: @color;
+}
+
+.width(@width) {
+  width: @width;
+}
+
+.height(@height) {
+  height: @height;
+}
+
+.mg-auto() {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.visiully-hidden {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+body {
+  min-width: @width;
+  .reset();
+  .bg-color(#452800);
+  .font-base(@fontRegular;18px;40px);
+  .color(@black);
+  text-transform: uppercase;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

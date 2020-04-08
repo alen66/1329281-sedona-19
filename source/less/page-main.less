@@ -1,0 +1,23 @@
+.page-main {
+  width: @width;
+  .mg-auto();
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    width: @width;
+    min-height: 389px;
+  }
+
+  &__back-image--back,
+  &__back-image--text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .bg-color(#d7e5f0);
+  }
+
+  &__back-image--back {
+    height: 389px;
+  }
+}

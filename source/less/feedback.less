@@ -1,0 +1,17 @@
+.feedback {
+  width: @width;
+  .bg-color(@white);
+  text-align: center;
+
+  &__title {
+    .reset();
+    .font-base(@fontBold; 18px; 26px);
+    padding: 40px 20px 0 20px;
+  }
+
+  &__text {
+    .reset();
+    .font-base(@fontRegular; 14px; 24px);
+    padding: 40px 20px 0 20px;
+  }
+}
