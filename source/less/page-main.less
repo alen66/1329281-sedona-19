@@ -17,21 +17,17 @@
     position: absolute;
     top: 0;
     left: 0;
-}
+  }
 
   &__back-image--back {
     height: 389px;
     .bg-color(#d7e5f0);
+    clip: rect(0 540px 389px 220px);
   }
 }
 
 .page-main__back-image {
-
-  &--back {
-    clip: rect(0px 540px 389px 220px);
-  }
-
-  &--text1 {
+    &--text1 {
     width: 280px;
     height: 213px;
     top: 87px;
@@ -39,6 +35,5 @@
     transform: translateX(-50%);
     opacity: 1;
     filter: saturate(200%);
-
   }
 }

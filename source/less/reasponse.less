@@ -46,11 +46,11 @@
     }
 
     &:hover::before {
-        .bg-color(#e5e5e5);
+      .bg-color(#e5e5e5);
     }
 
-    &:active:before {
-        .bg-color(#d5d5d5);
+    &:active::before {
+      .bg-color(#d5d5d5);
     }
   }
 }
@@ -86,50 +86,52 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  color:#000000; opacity:1;}
+  color:#000000;
+  opacity:1;
+}
 
-input[name*=name] {
+input[name*="name"] {
   width: 190px;
   flex-grow: 2;
   margin-left: 16px;
 }
 
-input[type=tel],
-input[type=email] {
+input[type="tel"],
+input[type="email"] {
   width: 227px;
 }
 
-input[type=radio],
-input[type=checkbox] {
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 
-input[type=radio]:checked + label:before {
-    content: "\2022";
-    color: #333333;
-    font-size: 65px;
-    text-align: center;
-    line-height: 39px;
+input[type="radio"]:checked + label::before {
+  content: "\2022";
+  color: #333333;
+  font-size: 65px;
+  text-align: center;
+  line-height: 39px;
 }
 
-input[type=radio]:checked + label:active:before {
+input[type="radio"]:checked + label:active::before {
   color: #a4a4a4;
 }
 
-input[type=checkbox]:checked + label:before {
-    content: "";
-    .bg-color(#f2f2f2);
-    text-align: center;
-    background-image: url(../img/icon-tick.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  .bg-color(#f2f2f2);
+  text-align: center;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-input[type=checkbox]:checked + label:hover:before {
+input[type="checkbox"]:checked + label:hover::before {
   .bg-color(#e5e5e5);
 }
 
-input[type=checkbox]:checked + label:active:before {
+input[type="checkbox"]:checked + label:active::before {
   .bg-color(#d5d5d5);
   opacity: 0.6;
 }
@@ -186,25 +188,25 @@ input[type=checkbox]:checked + label:active:before {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url(../img/icon-phone.svg);
+    background-image: url("../img/icon-phone.svg");
   }
 
   &--email::after {
-    background-image: url(../img/icon-mail.svg);
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
 .response__btn {
-    display: block;
-    color: @white;
-    background-color: #81b3d2;
-    .font-base(@fontBold; 21px; 26px;700);
-    .reset();
-    .mg-auto();
-    width: 280px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    text-align: center;
-    margin-top: 52px;
-    .blue-action();
-  }
+  display: block;
+  color: @white;
+  background-color: #81b3d2;
+  .font-base(@fontBold; 21px; 26px;700);
+  .reset();
+  .mg-auto();
+  width: 280px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  text-align: center;
+  margin-top: 52px;
+  .blue-action();
+}
