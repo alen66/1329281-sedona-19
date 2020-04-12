@@ -1,6 +1,10 @@
 .social {
   display: flex;
   flex-direction: row;
+
+  &__item {
+    position: relative;
+  }
 }
 
 .social__list {
@@ -11,13 +15,20 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
   .bg-color(@blue);
   margin-right: 7px;
+  .blue-action();
 }
 
 .social__item:nth-child(3) a {
   margin-right: 0;
+}
+
+.social__link > svg {
+  fill: @white;
 }

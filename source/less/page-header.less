@@ -5,3 +5,16 @@
   .mg-auto();
   width: @width;
 }
+
+.page-header__logo {
+  display: flex;
+  position: relative;
+  min-height: 60px;
+
+  &-image {
+    position: absolute;
+    z-index: 2;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

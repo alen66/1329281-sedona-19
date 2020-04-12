@@ -10,18 +10,19 @@
   font-style: @style;
 }
 
-.font-base(@fontName;@fontSize;@font-height) {
+.font-base(@fontName;@fontSize;@font-height;@font-weight) {
   font-family: @fontName;
   font-size: @fontSize;
   line-height: @font-height;
+  font-weight: @font-weight;
 }
 
 @font-face {
-  .font(@fontRegular;@font-url;);
+  .font(@fontRegular;@font-url;400;normal);
 }
 
 @font-face {
-  .font(@fontBold; @font-urlBold; bold;);
+  .font(@fontBold; @font-urlBold; 700;normal);
 }
 
 @blue:#81b3d2;
@@ -60,7 +61,23 @@
   padding: 0;
 }
 
-.visiully-hidden {
+.brd-btm() {
+  border-bottom: 1px solid #f2e9e9;
+}
+
+.blue-action() {
+   &:hover {
+    .bg-color(#669ec1);
+  }
+
+  &:active {
+    .bg-color(#5596be);
+    color: #94b8d2;
+  }
+}
+
+
+.visually-hidden {
   visibility: hidden;
   padding: 0;
   margin: 0;
@@ -72,7 +89,7 @@ body {
   min-width: @width;
   .reset();
   .bg-color(#452800);
-  .font-base(@fontRegular;18px;40px);
+  .font-base(@fontRegular;18px;40px;400);
   .color(@black);
   text-transform: uppercase;
 }
