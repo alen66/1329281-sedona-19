@@ -1,6 +1,8 @@
 .site-list__item a {
   border-bottom: 1px solid @dark-blue;
   border-top: 1px solid @light-blue;
+  .blue-action();
+  position: relative;
 }
 
 .site-list__item:last-child {
@@ -9,4 +11,11 @@
 
 .site-list__item:first-child {
   border-top: none;
+}
+
+.site-list__item--active > a > svg {
+  fill: #ffffff;
+  position: absolute;
+  top: 13px;
+  right: 20px;
 }

@@ -1,23 +1,39 @@
 .page-main {
   width: @width;
+  .reset();
   .mg-auto();
 
   &__wrapper {
-    display: flex;
+    display: block;
+    width: 768px;
+    margin-left: -220px;
     position: relative;
-    width: @width;
     min-height: 389px;
+    overflow: hidden;
   }
 
   &__back-image--back,
-  &__back-image--text {
+  &__back-image--text1 {
     position: absolute;
     top: 0;
     left: 0;
-    .bg-color(#d7e5f0);
   }
 
   &__back-image--back {
     height: 389px;
+    .bg-color(#d7e5f0);
+    clip: rect(0 540px 389px 220px);
+  }
+}
+
+.page-main__back-image {
+  &--text1 {
+    width: 280px;
+    height: 213px;
+    top: 87px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    filter: saturate(200%);
   }
 }
