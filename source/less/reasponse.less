@@ -23,6 +23,7 @@
   &label {
     .font-base(@fontRegular;14px;21px;400);
     padding-bottom: 20px;
+    color: #696969;
   }
 
   &label--strong,
@@ -32,16 +33,17 @@
     position: relative;
     padding-bottom: 55px;
     padding-left: 77px;
+    color: inherit;
 
     &::before {
       display: inline-block;
       content: "";
       position: absolute;
-      width: 45px;
-      height: 45px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       .bg-color(#f2f2f2);
-      top: -9px;
+      top: -13px;
       left: 0;
     }
 
@@ -107,11 +109,9 @@ input[type="checkbox"] {
 }
 
 input[type="radio"]:checked + label::before {
-  content: "\2022";
-  color: #333333;
-  font-size: 65px;
-  text-align: center;
-  line-height: 39px;
+  content: "";
+  .bg-color(#333333);
+  border: 17px solid #f2f2f2;
 }
 
 input[type="radio"]:checked + label:active::before {
@@ -208,5 +208,6 @@ input[type="checkbox"]:checked + label:active::before {
   padding-bottom: 19px;
   text-align: center;
   margin-top: 52px;
+  text-transform: uppercase;
   .blue-action();
 }
