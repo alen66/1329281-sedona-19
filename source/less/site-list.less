@@ -13,9 +13,46 @@
   border-top: none;
 }
 
-.site-list__item--active > a > svg {
+.site-list__item > a > svg {
   fill: #ffffff;
   position: absolute;
   top: 13px;
   right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    .mg-auto();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 688px;
+  }
+
+  .site-list__item a,
+  .site-list__item {
+    border: none;
+    box-shadow: none;
+  }
+
+  .site-list__item > a > svg {
+    display: none;
+  }
+
+  .site-list__item {
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex-grow: 2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 1040px;
+  }
 }

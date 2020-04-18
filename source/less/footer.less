@@ -35,3 +35,27 @@
 .footer__wrapper {
   margin-top: 40px;
 }
+
+@media (min-width: @tablet-width) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 35px;
+    padding-top: 80px;
+
+    &__link {
+      .reset();
+    }
+
+    &__wrapper {
+      .reset();
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    padding-top: 120px;
+  }
+}
