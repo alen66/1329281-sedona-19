@@ -29,11 +29,25 @@
 @white: #ffffff;
 @dark-blue:#678fa8;
 @light-blue:#9ac2db;
-@width: 320px;
+:root {
+  --width: 320px;
+}
+@width: var(--width);
 @tablet-width:768px;
 @desktop-width:1200px;
 @black:#000000;
 
+@media (min-width: @tablet-width) {
+  :root {
+    --width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  :root {
+    --width: 1200px;
+  }
+}
 
 .reset() {
   padding: 0;
@@ -48,8 +62,20 @@
   color: @color;
 }
 
+@width: var(--width);
+
 .width(@width) {
   width: @width;
+}
+
+.pad(@pad) {
+  padding-left: @pad;
+  padding-right: @pad;
+}
+
+.mg(@mg) {
+  margin-right: @mg;
+  margin-left: @mg;
 }
 
 .height(@height) {

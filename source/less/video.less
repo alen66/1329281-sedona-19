@@ -47,15 +47,13 @@
 .video__container {
   display: flex;
   align-items: center;
-  vertical-align: middle;
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   min-width: 280px;
   height: 45px;
-  background-color: #000000;
-  opacity: 0.5;
+  .bg-color(rgba(0,0,0,0.5));
   border-radius: 2px;
 }
 
@@ -79,24 +77,21 @@
 }
 
 .video__icon {
-  background-repeat: no-repeat;
-  background-position: center;
   width: 30px;
   height: 30px;
   opacity: 0.6;
+  fill: #454545;
+
 
   &--replay {
-    background-image: url("../img/icon-video-replay.svg");
     margin-left: 24px;
   }
 
   &--subtitles {
-    background-image: url("../img/icon-video-subtitles.svg");
     margin-left: 120px;
   }
 
   &--fullscreen {
-    background-image: url("../img/icon-video-fullscreen.svg");
     margin-right: 24px;
   }
 
@@ -106,5 +101,99 @@
 
   &:active {
     opacity: 0.2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    position: relative;
+    .pad(60px);
+
+    &__title {
+      .font-base(@fontBold; 30px; 26px;700);
+      padding-top: 70px;
+    }
+
+    &__text {
+      width: 440px;
+      .mg-auto();
+      padding-top: 40px;
+    }
+
+    &__img {
+      width: 648px;
+      height: 499px;
+    }
+
+    &__wrapper {
+      align-items: center;
+
+      &--icons {
+        position: absolute;
+        height: 92px;
+        width: 648px;
+        .mg-auto();
+        bottom: 0;
+        .bg-color(rgba(0,0,0,0.5));
+      }
+    }
+
+    &__container {
+      height: 92px;
+      width: 426px;
+      .bg-color(rgba(0,0,0,0.0));
+      bottom: 0;
+    }
+
+    &__range {
+      width: 390px;
+    }
+
+    &__icon {
+      .reset();
+    }
+
+    &__icon > svg {
+      filter: saturate(300%);
+      fill: #ffffff;
+    }
+
+    &__icon--replay {
+      margin-left: 40px;
+      flex-grow: 2;
+    }
+
+    &__icon--subtitles {
+      margin-left: 40px;
+    }
+
+    &__icon--fullscreen {
+      margin-right: 40px;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    &__img {
+      width: 800px;
+      height: 500px;
+    }
+
+    &__wrapper {
+      align-items: center;
+
+      &--icons {
+        position: absolute;
+        height: 100px;
+        width: 800px;
+        .reset();
+        .mg-auto();
+        left: 200px;
+        bottom: 0;
+        .bg-color(rgba(0,0,0,0.5));
+      }
+    }
   }
 }

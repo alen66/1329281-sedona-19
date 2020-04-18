@@ -49,7 +49,7 @@
 
 .search__wrapper {
   display: block;
-  min-width: 320px;
+  width: @width;
   height: 350px;
   position: relative;
 
@@ -59,5 +59,23 @@
     z-index: 2;
     top: 0;
     left: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .search__text {
+    width:435px;
+
+    &----title {
+      .font-base(@fontBold;30px;26px;700);
+    }
+  }
+
+  .search__link {
+    width: 460px;
+  }
+
+  .search__map {
+    .width(@width);
   }
 }

@@ -94,3 +94,154 @@
   fill: @blue;
   transform: scale(0.5);
 }
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    justify-content: center;
+
+    &__title--reason {
+      .width(@width);
+      padding-left: 164px;
+      padding-right: 164px;
+      min-height: 44px;
+    }
+
+    &__title--live {
+      .reset();
+      padding-top: 62px;
+      width: 76px;
+      text-align: center;
+
+      &>svg {
+        top: 49px;
+        left: 0;
+        transform: scale(1);
+        position: initial;
+        margin-bottom: 35px;
+      }
+    }
+
+    &__description--reason {
+      padding-bottom: 60px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+
+      &--live {
+        .width(@width);
+        .reset();
+        display: flex;
+        flex-direction: row;
+        min-height: 333px;
+      }
+    }
+
+    &__title--city,
+    &__description--city {
+      .reset();
+      border-top: none;
+    }
+
+    &__description--city {
+      width: 165px;
+    }
+
+    &__description--live {
+      .reset();
+      width: 165px;
+      text-align: center;
+      padding-top: 34px;
+      padding-bottom: 70px;
+    }
+
+    &__item {
+      display: flex;
+
+      &--blue {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      &--blue:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+
+      &--grey {
+        width: calc(@width/3);
+        flex-direction: column;
+        min-height: 260px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &--live {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(@width/3);
+
+        &:nth-child(2) {
+          order: 3
+        }
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      .width(256px);
+      justify-content: center;
+      align-items: center;
+
+      &--grey {
+        display: flex;
+        flex-direction: row;
+        min-height: 260px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__img {
+      min-width: 512px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    &__img {
+      min-width: 800px;
+    }
+
+    &-container {
+      .width(400px);
+    }
+
+    &__title--live {
+      .reset();
+      padding-top: 62px;
+      width: 106px;
+
+      &>svg {
+        top: 49px;
+        left: 0;
+        transform: scale(1.06)
+      }
+    }
+
+    &__description--live {
+      .reset();
+      width: 285px;
+      padding-top: 34px;
+      padding-bottom: 90px;
+    }
+
+    &__description--city {
+      width: 285px;
+    }
+  }
+}

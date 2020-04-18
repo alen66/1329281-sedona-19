@@ -3,7 +3,7 @@
   flex-direction: column;
   .bg-color(@white);
   .mg-auto();
-  width: @width;
+  .width(@width);
 }
 
 .page-header__logo {
@@ -16,5 +16,30 @@
     z-index: 2;
     right: 50%;
     transform: translateX(50%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    .width(@width);
+    flex-direction: row;
+    justify-content: center;
+
+    &__logo {
+      position: absolute;
+      width: 103px;
+      z-index: 2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    .width(@width);
+
+    &__logo {
+      top: 24px;
+      transform: scale(1.8);
+    }
   }
 }
