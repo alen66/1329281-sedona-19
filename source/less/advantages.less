@@ -75,11 +75,11 @@
   }
 }
 
-.advantages__item--blue > .advantages__description {
+.advantages__container--blue > .advantages__description {
   color: #ffffff;
 }
 
-.advantages__item--blue > .advantages__title--city {
+.advantages__container--blue > .advantages__title--city {
   border: none;
 }
 
@@ -189,7 +189,7 @@
       }
     }
 
-    &-container {
+    &__container {
       display: flex;
       flex-direction: column;
       .width(256px);
@@ -202,6 +202,7 @@
         min-height: 260px;
         justify-content: center;
         align-items: center;
+        .width(100%);
       }
     }
 
@@ -217,7 +218,7 @@
       min-width: 800px;
     }
 
-    &-container {
+    &__container--blue {
       .width(400px);
     }
 

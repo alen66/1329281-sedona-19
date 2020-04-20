@@ -17,3 +17,19 @@
     color: #333333;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    &__text {
+      .reset();
+      .mg-auto();
+      padding-top: 40px;
+      width: 442px;
+      border-bottom: none;
+    }
+
+    &__title {
+    .font-base(@fontBold; 30px; 26px;700);
+    }
+  }
+}
