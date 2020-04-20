@@ -230,12 +230,12 @@ input[type="checkbox"]:checked + label:active::before {
 
     &__comment {
       order: 1;
-      width: calc(100%/2);
+      width: calc(100% / 2);
     }
 
     &__user {
       order: 2;
-      max-width: calc(100%/2);
+      max-width: calc(100% / 2);
     }
 
     &__contact {
@@ -266,7 +266,7 @@ input[type="checkbox"]:checked + label:active::before {
 
     &__wrapper--place {
       .reset();
-      width: calc(100%/2);
+      width: calc(100% / 2);
     }
 
     &__write {
@@ -276,8 +276,8 @@ input[type="checkbox"]:checked + label:active::before {
 
     &__btn {
       order: 6;
-      width: calc(100%/2);
-      margin-left: 60px ;
+      width: calc(100% / 2);
+      margin-left: 60px;
       justify-content: start;
     }
 
@@ -303,7 +303,7 @@ input[type="checkbox"]:checked + label:active::before {
   .response__write {
     border-bottom: none;
     margin: 0;
-    .pad(60px;)
+    .pad(60px;);
   }
 
   input[name*="name"] {
@@ -326,16 +326,18 @@ input[type="checkbox"]:checked + label:active::before {
   .response {
     &__wrapper--place {
       .reset();
-      width: calc(100%/4);
+      width: calc(100% / 4);
     }
 
     &__wrapper--contact {
       .reset();
-      max-width: 400px ;
+      max-width: 400px;
+      display: flex;
+      flex-direction: row
     }
 
     &__btn {
-      margin-left: 120px ;
+      margin-left: 120px;
     }
 
     &__wrapper--user {
@@ -346,17 +348,12 @@ input[type="checkbox"]:checked + label:active::before {
       display: none;
     }
 
-    &__wrapper--contact {
-      display: flex;
-      flex-direction: row;
-    }
-
     &__user,
     &__contact,
     &__comment,
     &__place,
     &__write {
-    .pad(120px);
+      .pad(120px);
     }
 
     &__comment {
