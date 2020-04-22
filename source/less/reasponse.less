@@ -24,6 +24,7 @@
     .font-base(@fontRegular;14px;21px;400);
     padding-bottom: 20px;
     color: #333333;
+    text-align: start;
   }
 
   &label--strong,
@@ -156,6 +157,7 @@ input[type="checkbox"]:checked + label:active::before {
   &--contact {
     flex-direction: column;
     align-items: stretch;
+    flex-wrap: nowrap;
   }
 
   &--comment,
@@ -211,4 +213,187 @@ input[type="checkbox"]:checked + label:active::before {
   text-transform: uppercase;
   border: none;
   .blue-action();
+}
+
+@media (min-width: @tablet-width) {
+  .response {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__legend {
+      .font-base(@fontBold;21px;26px;700);
+      .reset();
+      padding-top: 56px;
+      padding-bottom: 60px;
+    }
+
+    &__comment {
+      order: 1;
+      width: calc(100% / 2);
+    }
+
+    &__user {
+      order: 2;
+      max-width: calc(100% / 2);
+    }
+
+    &__contact {
+      order: 3;
+      width: 100%;
+    }
+
+    &__place {
+      order: 4;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &--contact {
+        flex-direction: column;
+      }
+    }
+
+    &__wrapper--user {
+      max-width: 264px;
+    }
+
+    &__wrapper--place {
+      .reset();
+      width: calc(100% / 2);
+    }
+
+    &__write {
+      order: 5;
+      width: 100%;
+    }
+
+    &__btn {
+      order: 6;
+      width: calc(100% / 2);
+      margin-left: 60px;
+      justify-content: start;
+    }
+
+    &_label {
+      flex: 1 2 auto;
+    }
+  }
+
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+  }
+
+  .response__textarea {
+    min-height: 160px;
+    min-width: 100%;
+  }
+
+  .response__user,
+  .response__contact,
+  .response__comment,
+  .response__place,
+  .response__write {
+    border-bottom: none;
+    margin: 0;
+    .pad(60px;);
+  }
+
+  input[name*="name"] {
+    flex: 2 1 auto;
+    width: 175px;
+  }
+
+
+  .response__comment > .response__legend {
+    text-align: start;
+    letter-spacing: -0.1px;
+  }
+
+  .response__user > .response__legend {
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .response {
+    &__wrapper--place {
+      .reset();
+      width: calc(100% / 4);
+    }
+
+    &__wrapper--contact {
+      .reset();
+      max-width: 400px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__btn {
+      margin-left: 120px;
+    }
+
+    &__wrapper--user {
+      max-width: 400px;
+    }
+
+    &-none {
+      display: none;
+    }
+
+    &__user,
+    &__contact,
+    &__comment,
+    &__place,
+    &__write {
+      .pad(120px);
+    }
+
+    &__comment {
+      padding-right: 80px;
+    }
+
+    &__user {
+      padding-left: 80px;
+    }
+
+    &__btn::after {
+      content: "* обязательные поля";
+      position: absolute;
+      right: 0;
+      color: #333333;
+      .font-base(@fontRegular;14px;26px;400);
+      margin-right: 200px;
+    }
+  }
+
+  input[name*="name"] {
+    flex: 2 1 auto;
+    width: 314px;
+  }
+
+  .response__comment > .response__legend {
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .response__wrapper--contact > .response__label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 0;
+    height: 58px;
+  }
+
+  .response__container--contact {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
