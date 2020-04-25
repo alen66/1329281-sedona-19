@@ -1,11 +1,11 @@
 .response__legend {
   .font-base(@fontBold;18px;26px;700);
-  padding: 25px 20px 29px 20px;
+  padding: 17px 20px 18px 20px;
   text-align: center;
 }
 
 .response__contact > .response__legend {
-  padding-bottom: 34px;
+  padding-bottom: 26px;
 }
 
 .response__ {
@@ -22,7 +22,7 @@
 
   &label {
     .font-base(@fontRegular;14px;21px;400);
-    padding-bottom: 20px;
+    padding-bottom: 0;
     color: #333333;
     text-align: start;
   }
@@ -32,7 +32,8 @@
     .font-base(@fontBold;18px;26px;700);
     text-transform: none;
     position: relative;
-    padding-bottom: 55px;
+    padding-top: 19px;
+    padding-bottom: 24px;
     padding-left: 77px;
     color: inherit;
 
@@ -44,7 +45,7 @@
       height: 56px;
       border-radius: 50%;
       .bg-color(#f2f2f2);
-      top: -13px;
+      top: 4px;
       left: 0;
     }
 
@@ -73,7 +74,6 @@ textarea {
   border: none;
   height: 58px;
   .reset();
-  margin-bottom: 20px;
   padding-left: 20px;
   .font-base(@fontBold;18px;26px;700);
   color: @black;
@@ -143,9 +143,9 @@ input[type="checkbox"]:checked + label:active::before {
 }
 
 .response__textarea {
-  min-height: 162px;
-  min-width: 280px;
-  padding: 24px 36px 0 24px;
+  min-height: 157px;
+  min-width: 285px;
+  padding: 13px 36px 0 24px;
 }
 
 .response__wrapper {
@@ -154,16 +154,26 @@ input[type="checkbox"]:checked + label:active::before {
   align-items: center;
   justify-content: space-between;
 
+  &--user {
+    height: 58px;
+    margin-bottom: 23px;
+  }
+
   &--contact {
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
+    margin-bottom: 25px;
   }
 
   &--comment,
   &--place {
     flex-direction: row;
     justify-content: flex-start;
+  }
+
+  &--place {
+    margin-bottom: 8px;
   }
 }
 
@@ -172,6 +182,18 @@ input[type="checkbox"]:checked + label:active::before {
 .response__comment,
 .response__place {
   .brd-btm();
+}
+
+.response__contact {
+  margin-bottom: 9px;
+}
+
+.response__comment {
+ padding-bottom: 18px;
+}
+
+.response__place {
+ padding-bottom: 18px;
 }
 
 .response__icon {
@@ -206,31 +228,48 @@ input[type="checkbox"]:checked + label:active::before {
   .reset();
   .mg-auto();
   width: 280px;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
   margin-top: 52px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   border: none;
   .blue-action();
 }
 
 @media (min-width: @tablet-width) {
+  .response__user,
+  .response__contact,
+  .response__comment,
+  .response__place,
+  .response__write {
+    border-bottom: none;
+    margin: 0;
+    .pad(60px;);
+  }
+
+  .response__wrapper--contact > .response__label {
+    padding-top: 20px;
+  }
+
   .response {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 20px;
 
     &__legend {
       .font-base(@fontBold;21px;26px;700);
       .reset();
-      padding-top: 56px;
-      padding-bottom: 60px;
+      padding-top: 54px;
+      padding-bottom: 54px;
     }
 
     &__comment {
       order: 1;
       width: calc(100% / 2);
+      border-right: 1 solid #b2b2b2;
     }
 
     &__user {
@@ -241,6 +280,7 @@ input[type="checkbox"]:checked + label:active::before {
     &__contact {
       order: 3;
       width: 100%;
+      margin-top: -10px;
     }
 
     &__place {
@@ -254,6 +294,8 @@ input[type="checkbox"]:checked + label:active::before {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-top: -16px;
 
       &--contact {
         flex-direction: column;
@@ -266,23 +308,39 @@ input[type="checkbox"]:checked + label:active::before {
 
     &__wrapper--place {
       .reset();
-      width: calc(100% / 2);
+      width: 205px;
+      margin-right: 25px;
+      margin-bottom: 15px;
+    }
+
+    &__wrapper--comment {
+      margin-bottom: 9px;
+    }
+
+    &__wrapper--contact {
+      margin-bottom: 2px;
     }
 
     &__write {
       order: 5;
       width: 100%;
+      margin-top: -20px;
     }
 
     &__btn {
       order: 6;
-      width: calc(100% / 2);
+      width: 324px;
       margin-left: 60px;
       justify-content: start;
+      margin-bottom: 22px;
     }
 
     &_label {
       flex: 1 2 auto;
+    }
+
+    &__icon {
+      margin-top: 9px;
     }
   }
 
@@ -296,21 +354,10 @@ input[type="checkbox"]:checked + label:active::before {
     min-width: 100%;
   }
 
-  .response__user,
-  .response__contact,
-  .response__comment,
-  .response__place,
-  .response__write {
-    border-bottom: none;
-    margin: 0;
-    .pad(60px;);
-  }
-
   input[name*="name"] {
     flex: 2 1 auto;
     width: 175px;
   }
-
 
   .response__comment > .response__legend {
     text-align: start;
@@ -320,24 +367,39 @@ input[type="checkbox"]:checked + label:active::before {
   .response__user > .response__legend {
     text-align: start;
   }
+
+  .response__place > .response__legend {
+    width: 227px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .response {
+    margin-top: 5px;
+    margin-bottom: -40px;
+
     &__wrapper--place {
       .reset();
-      width: calc(100% / 4);
+      width: 200px;
+      margin-right: 52px;
+    }
+
+    &__wrapper--place:last-child {
+      margin-right: 0;
     }
 
     &__wrapper--contact {
       .reset();
-      max-width: 400px;
+      min-width: 400px;
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
 
     &__btn {
       margin-left: 120px;
+      margin-top: 60px;
+      width: 480px;
     }
 
     &__wrapper--user {
@@ -356,8 +418,16 @@ input[type="checkbox"]:checked + label:active::before {
       .pad(120px);
     }
 
+    &__contact {
+      margin-top: -20px;
+    }
+
     &__comment {
       padding-right: 80px;
+    }
+
+    &__write {
+      margin-top: -20px;
     }
 
     &__user {
@@ -379,9 +449,18 @@ input[type="checkbox"]:checked + label:active::before {
     width: 314px;
   }
 
+  input[type="tel"],
+  input[type="email"] {
+    width: 317px;
+  }
+
   .response__comment > .response__legend {
     text-align: center;
     letter-spacing: 0;
+  }
+
+  .response__contact > .response__legend {
+  padding-bottom: 74px;
   }
 
   .response__wrapper--contact > .response__label {
@@ -392,8 +471,22 @@ input[type="checkbox"]:checked + label:active::before {
     height: 58px;
   }
 
+  .response__place > .response__legend {
+    padding-bottom: 40px;
+  }
+
+  .response__container {
+    justify-content: start;
+    margin-top: 0;
+  }
+
   .response__container--contact {
     flex-direction: row;
     justify-content: space-around;
+    height: 58px;
+  }
+
+  .response__icon {
+    margin: 0;
   }
 }

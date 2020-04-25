@@ -7,10 +7,17 @@
   &__list {
     list-style: none;
     .reset();
-    padding: 40px 20px 0 20px;
+    padding: 26px 20px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__icon--like {
+    fill: #b2b2b2;
+    width: 24px;
+    height: 22px;
+    margin-right: 10px;
   }
 }
 
@@ -25,7 +32,7 @@
   .reset();
   .font-base(@fontRegular; 14px; 24px;400);
   text-align: center;
-  padding: 20px 20px 0 20px;
+  padding: 28px 20px 0 20px;
   color: #333333;
 }
 
@@ -34,28 +41,24 @@
   .reset();
   text-transform: none;
   text-align: left;
-  padding-top: 15px;
+  padding-bottom: 1px;
   color: #333333;
 
   &--title {
     .font-base(@fontBold; 14px; 24px;700);
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 16px;
     color: inherit;
   }
 
   &--count {
     .font-base(@fontBold; 14px; 24px;700);
     text-transform: uppercase;
-    padding: 25px 20px 25px 0;
+    padding: 0;
     position: relative;
     border-bottom: 1px solid #f2e9e9;
     color: inherit;
-
-    & > svg {
-      fill: #b2b2b2;
-      margin-right: 16px;
-    }
+    padding-bottom: 14px;
   }
 }
 
@@ -74,7 +77,7 @@
     &__description {
       .mg-auto();
       width: 442px;
-      padding-top: 35px;
+      padding-top: 30px;
     }
 
     &__img {
@@ -89,7 +92,7 @@
       .reset();
       .mg-auto();
       .width(648px);
-      margin-top: 75px;
+      margin-top: 70px;
     }
 
     &__item {
@@ -139,6 +142,7 @@
 @media (min-width: @desktop-width) {
   .photo-sample__list {
     .width(1200px);
+    margin-top: 74px;
   }
 
   .photo-sample__item {
@@ -187,4 +191,8 @@
       margin-right: 16px;
     }
   }
+
+  .photo-sample__title {
+      padding-top: 110px;
+    }
 }
