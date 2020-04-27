@@ -5,9 +5,9 @@
 
   &__wrapper {
     display: block;
-    width: @width;
+    width: 320px;
     position: relative;
-    min-height: 143px;
+    min-height: 156px;
     overflow: hidden;
   }
 
@@ -20,9 +20,12 @@
 .photo-main__back-image {
   &--back {
     .bg-color(#d7e5f0);
-    height: 389px;
-    top: -229px;
+ /*    width: 768px;
+ height: 389px;
+ overflow: hidden;
+ clip: rect(233px, 542px, 389px, 222px); */
     left: 0;
+    top: -10px;
   }
 
   &--text {
@@ -37,15 +40,26 @@
 @media (min-width: @tablet-width) {
   .photo-main__back-image {
     &--back {
+      clip: auto;
       width: @width;
-      height: 294px;
-      top: -103px;
+      height: 518px;
+      top: -220px;
       left: 0;
     }
 
     &--text {
-      top: 50px;
+      top: 93px;
+      width: 460px;
+      height: 80px;
+      right: 0;
+      left: 50%
     }
+  }
+
+  .photo-main__wrapper {
+    height: 290px;
+    width: 768px;
+
   }
 }
 
@@ -53,15 +67,20 @@
   .photo-main__back-image {
     &--back {
       width: @width;
-      height: 305px;
-      top: -103px;
+      height: 518px;
+      top: -212px;
       left: 0;
     }
 
     &--text {
-      transform: scale(2);
-      left: 40%;
-      top: 50px;
+      width: 460px;
+      height: 79px;
+      top: 100px;
     }
+  }
+
+  .photo-main__wrapper {
+    min-height: 300px;
+    width: 1200px;
   }
 }

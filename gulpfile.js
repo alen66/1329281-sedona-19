@@ -35,3 +35,15 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+var gulp = require('gulp');
+var server1 = require('gulp-server-livereload');
+
+gulp.task('default', function() {
+  gulp.src('source/')
+    .pipe(server1({
+      livereload: true,
+      directoryListing: false,
+      open: false
+    }));
+});

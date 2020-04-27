@@ -1,4 +1,5 @@
 .feedback {
+  padding-bottom: 30px;
   width: @width;
   .bg-color(@white);
   text-align: center;
@@ -12,7 +13,7 @@
   &__text {
     .reset();
     .font-base(@fontRegular; 14px; 24px;400);
-    padding: 40px 20px 25px 20px;
+    padding: 24px 20px 18px 20px;
     border-bottom: 1px solid #e5e5e5;
     color: #333333;
   }
@@ -23,13 +24,22 @@
     &__text {
       .reset();
       .mg-auto();
-      padding-top: 40px;
+      padding-top: 30px;
       width: 442px;
       border-bottom: none;
     }
 
     &__title {
       .font-base(@fontBold; 30px; 26px;700);
+      padding-top: 74px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    &__title {
+      padding-top: 112px;
     }
   }
 }
