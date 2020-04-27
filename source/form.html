@@ -46,8 +46,8 @@
       <picture>
       <source srcset="img/bg-back-desktop@1x.jpg" media="(min-width: 1200px)">
       <source srcset="img/bg-back-tablet@1x.jpg" media="(min-width: 768px)">
-      <source srcset="img/bg-back-mobile@1x.jpg" type="">
-      <img class="photo-main__back-image--back" srcset="img/bg-back-mobile@1x.jpg" width="768" height="389" alt="">
+      <source srcset="img/bg-back-mobile@1x_cut.jpg" type="">
+      <img class="photo-main__back-image--back" srcset="img/bg-back-mobile@1x_cut.jpg" width="768" height="389" alt="">
     </picture>
     <svg class="photo-main__back-image--text"><use xlink:href="img/sprite.svg#text-sedona"></use></svg>
     <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#triangle-mobile"></use></svg>
@@ -55,86 +55,88 @@
     <svg class="page-main__triangle--desktop"><use xlink:href="img/sprite.svg#triangle-desktop"></use></svg>
     </div>
     <section class="feedback">
-    <h2 class="feedback__title">Оставьте свой отзыв</h2>
-    <p class="feedback__text">Помогите нашим отелям стать лучше!
-    Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
-    <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru">
-    <fieldset class="response__user">
-    <legend class="response__legend">Представьтесь:</legend>
-      <div class="response__wrapper response__wrapper--user">
-        <label class="response__label" for="firstname">Имя*:</label>
-        <input type="text" name="firstname" id="firstname" placeholder="Петр" required="">
-      </div>
-      <div class="response__wrapper response__wrapper--user">
-        <label class="response__label" for="surname">Фамилия*:</label>
-        <input type="text" name="surname" id="surname" placeholder="Иванов" required="">
-      </div>
-      <div class="response__wrapper response__wrapper--user">
-        <label class="response__label" for="middlename">Отчество:</label>
-        <input type="text" name="middlename" id="middlename" placeholder="Александрович">
-      </div>
-    </fieldset>
-    <fieldset class="response__contact">
-      <legend class="response__legend">Контактная информация</legend>
-      <div class="response__container response__container--contact">
-      <div class="response__wrapper response__wrapper--contact">
-        <label class="response__label" for="phone"><span class="response-none"> Контактный</span> телефон:*</label>
-        <span class="response__icon">
-          <input type="tel" name="phone" id="phone" placeholder="Введите телефон" required="">
-        </span>
-      </div>
-      <div class="response__wrapper response__wrapper--contact">
-        <label class="response__label" for="email">Электронная почта:*</label>
-        <span class="response__icon response__icon--email">
-          <input type="email" name="email" id="email" placeholder="Введите e-mail">
-        </span>
-      </div>
-      </div>
-    </fieldset>
-    <fieldset class="response__comment">
-      <legend class="response__legend">Ваше общее впечатление</legend>
-      <div class="response__container ">
-      <div class="response__wrapper response__wrapper--comment">
-        <input type="radio" name="comment" id="comment1" checked>
-        <label class="response__label response__label--strong" for="comment1">Скорее положительное</label>
-      </div>
-      <div class="response__wrapper response__wrapper--comment">
-        <input type="radio" name="comment" id="comment2" >
-        <label class="response__label response__label--strong" for="comment2">Скорее отрицательное</label>
-      </div>
-      <div class="response__wrapper response__wrapper--comment">
-        <input type="radio" name="comment" id="comment3">
-        <label class="response__label response__label--strong" for="comment3">Затрудняюсь ответить</label>
-      </div>
-      </div>
-    </fieldset>
-    <fieldset class="response__place">
-      <legend class="response__legend">Посещенные достопримечательности:</legend>
-      <div class="response__container">
-      <div class="response__wrapper response__wrapper--place">
-        <input type="checkbox" name="place1" id="place1" checked>
-        <label class="response__label response__label--strong-place" for="place1">Мост Дьявола</label>
-      </div>
-      <div class="response__wrapper response__wrapper--place">
-        <input type="checkbox" name="place2" id="place2" checked>
-        <label class="response__label response__label--strong-place" for="place2">Гора-Колокол</label>
-      </div>
-      <div class="response__wrapper response__wrapper--place">
-        <input type="checkbox" name="place3" id="place3" checked>
-        <label class="response__label response__label--strong-place" for="place3">Слайд-парк</label>
-      </div>
-      <div class="response__wrapper response__wrapper--place">
-        <input type="checkbox" name="place4" id="place4">
-        <label class="response__label response__label--strong-place" for="place4">Красные скалы</label>
-      </div>
-      </div>
-    </fieldset>
-    <fieldset class="response__write">
-      <legend class="response__legend">Опишите свои эмоции:</legend>
-      <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
-    </fieldset>
-    <button class='response__btn' type="submit"  value="Отправить">Отправить отзыв</button>
-    </form>
+      <h2 class="feedback__title">Оставьте свой отзыв</h2>
+      <p class="feedback__text">Помогите нашим отелям стать лучше!
+      Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
+      <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="response__user">
+          <legend class="response__legend">Представьтесь:</legend>
+          <div class="response__container ">
+            <div class="response__wrapper response__wrapper--user">
+              <label class="response__label" for="firstname">Имя*:</label>
+              <input type="text" name="firstname" id="firstname" placeholder="Петр" required="">
+            </div>
+            <div class="response__wrapper response__wrapper--user">
+              <label class="response__label" for="surname">Фамилия*:</label>
+              <input type="text" name="surname" id="surname" placeholder="Иванов" required="">
+            </div>
+            <div class="response__wrapper response__wrapper--user">
+              <label class="response__label" for="middlename">Отчество:</label>
+              <input type="text" name="middlename" id="middlename" placeholder="Александрович">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="response__contact">
+          <legend class="response__legend">Контактная информация</legend>
+          <div class="response__container response__container--contact">
+            <div class="response__wrapper response__wrapper--contact">
+              <label class="response__label" for="phone"><span class="response-none"> Контактный</span> телефон:*</label>
+              <span class="response__icon">
+                <input type="tel" name="phone" id="phone" pattern="2-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required="">
+              </span>
+            </div>
+            <div class="response__wrapper response__wrapper--contact">
+              <label class="response__label" for="email">Электронная почта:*</label>
+              <span class="response__icon response__icon--email">
+                <input type="email" name="email" id="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Введите e-mail" required="">
+              </span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="response__comment">
+          <legend class="response__legend">Ваше общее впечатление</legend>
+          <div class="response__container ">
+            <div class="response__wrapper response__wrapper--comment">
+              <input type="radio" name="comment" id="comment1" checked>
+              <label class="response__label response__label--strong" for="comment1">Скорее положительное</label>
+            </div>
+            <div class="response__wrapper response__wrapper--comment">
+              <input type="radio" name="comment" id="comment2" >
+              <label class="response__label response__label--strong" for="comment2">Скорее отрицательное</label>
+            </div>
+            <div class="response__wrapper response__wrapper--comment">
+              <input type="radio" name="comment" id="comment3">
+              <label class="response__label response__label--strong" for="comment3">Затрудняюсь ответить</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="response__place">
+          <legend class="response__legend">Посещенные достопримечательности:</legend>
+          <div class="response__container">
+            <div class="response__wrapper response__wrapper--place">
+              <input type="checkbox" name="place1" id="place1" checked>
+              <label class="response__label response__label--strong-place" for="place1">Мост Дьявола</label>
+            </div>
+            <div class="response__wrapper response__wrapper--place">
+              <input type="checkbox" name="place2" id="place2" checked>
+              <label class="response__label response__label--strong-place" for="place2">Гора-Колокол</label>
+            </div>
+            <div class="response__wrapper response__wrapper--place">
+              <input type="checkbox" name="place3" id="place3" checked>
+              <label class="response__label response__label--strong-place" for="place3">Слайд-парк</label>
+            </div>
+            <div class="response__wrapper response__wrapper--place">
+              <input type="checkbox" name="place4" id="place4">
+              <label class="response__label response__label--strong-place" for="place4">Красные скалы</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="response__write">
+          <legend class="response__legend">Опишите свои эмоции:</legend>
+          <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
+        </fieldset>
+        <button class='response__btn' type="submit"  value="Отправить">Отправить отзыв</button>
+      </form>
     </section>
   </main>
    <footer class="footer">
@@ -170,5 +172,12 @@
         </svg>
       </a>
   </footer>
+  <div class="form-error">
+    <p class="form-error__title">Что-то пошло не так!</p>
+    <p class="form-error__text">
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    </p>
+    <button class='form-error__btn' type="submit"  value="Отправить">Отправить отзыв</button>
+  </div>
 </body>
 </html>

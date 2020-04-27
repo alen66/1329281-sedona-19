@@ -21,12 +21,12 @@
 .advantages__title {
   .reset();
   .font-base(@fontBold; 18px; 26px;700);
-  padding: 37px 32px 0 32px;
+  padding: 37px 30px 0;
   text-align: center;
 
   &--city {
     .font-base(@fontBold; 18px; 26px;700);
-    padding: 35px 20px 0 20px;
+    padding: 40px 20px 0;
     text-align: center;
     border-top: 1px solid #d6d6d6;
     margin-right: 20px;
@@ -37,7 +37,7 @@
     .font-base(@fontBold; 18px; 26px;700);
     text-align: left;
     padding-left: 70px;
-    padding-top: 38px;
+    padding-top: 35px;
     position: relative;
   }
 }
@@ -51,6 +51,32 @@
   &--blue {
     .bg-color(@blue);
     .color(@white);
+    position: relative;
+
+    &:nth-child(1)::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      top: -15px;
+      right: 0;
+      border-style: solid;
+      border-width: 0 0 15px 160px;
+      border-color: transparent transparent #81b3d2 transparent ;
+    }
+
+    &:nth-child(1)::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      top: -15px;
+      border-style: solid;
+      border-width: 15px 0 0 160px;
+      border-color: transparent transparent transparent #81b3d2;
+    }
   }
 
   &--live {
@@ -59,14 +85,14 @@
   }
 
   &--grey {
-    height: 170px;
+    height: 168px;
   }
 }
 
 .advantages__description {
   .reset();
   .font-base(@fontRegular; 14px; 26px;400);
-  padding: 31px 20px 36px 20px;
+  padding: 30px 20px 40px;
   text-align: center;
   color: #333333;
 
@@ -74,12 +100,17 @@
     padding: 10px 20px 0 20px;
   }
 
+  &--city:nth-child(2) {
+    padding: 5px;
+  }
+
   &--city:last-of-type {
-    padding-bottom: 14px;
+    padding: 5px 20px 14px;
+    line-height: 23px;
   }
 
   &--live {
-    padding: 12px 20px 0 70px;
+    padding: 15px 20px 0 70px;
     text-align: left;
     line-height: 21px;
     margin-bottom: -6px;
@@ -94,6 +125,16 @@
   color: #ffffff;
 }
 
+.advantages__item--grey:nth-child(2) > .advantages__description--city {
+  width: 262px;
+  margin: 0 auto;
+}
+
+.advantages__item--grey:nth-child(3) > .advantages__description--city {
+  width: 299px;
+  margin: 0 auto;
+}
+
 .advantages__container--blue > .advantages__title--city {
   border: none;
 }
@@ -104,11 +145,15 @@
 
 .advantages__icon {
   position: absolute;
-  width: 32px;
+  width: 38px;
   height: 38px;
   top: 28px;
   left: 21px;
   fill: @blue;
+
+  &--house {
+    width: 38px;
+  }
 }
 
 .advantages__triangle--mobile {
@@ -123,23 +168,12 @@
   .advantages {
     justify-content: center;
 
-    &__triangle--mobile {
+    &__skip {
       display: none;
     }
 
-    &__title--reason {
-      .width(@width);
-      .font-base(@fontBold; 21px; 26px;700);
-      padding:50px 164px 0;
-      min-height: 44px;
-    }
-
-    &__title--live {
-      .reset();
-      .font-base(@fontBold; 21px; 26px;700);
-      margin-top: 64px;
-      width: 76px;
-      text-align: center;
+    &__triangle--mobile {
+      display: none;
     }
 
     &__icon {
@@ -174,21 +208,43 @@
       border-top: none;
     }
 
+
+    &__title--reason {
+      .width(@width);
+      .font-base(@fontBold; 21px; 26px;700);
+      padding:50px 164px 0;
+      min-height: 44px;
+    }
+
+    &__title--live {
+      .reset();
+      .font-base(@fontBold; 21px; 26px;700);
+      margin-top: 75px;
+      width: 107px;
+      text-align: center;
+    }
+
      &__title--city {
       width: 151px;
       .font-base(@fontBold; 21px; 26px;700);
-      margin-top: 48px;
+      margin-top: 45px;
     }
 
-    &__description--city {
-      width: 165px;
-      margin-bottom: 20px;
+    &__description--city:nth-child(2) {
+      margin-bottom: 0;
+      padding-bottom: 15px;
     }
 
-    &__description--city:last-of-type {
-    padding-bottom: 0;
-    line-height: 20px;
-   }
+    &__description--city:nth-child(3) {
+      padding-bottom: 0;
+      line-height: 20px;
+      width: 205px;
+    }
+
+    &__item--grey > .advantages__description--city:nth-child(2) {
+      padding-bottom: 15px;
+      padding-top: 10px;
+    }
 
     &__description--live {
       .reset();
@@ -206,7 +262,12 @@
         flex-wrap: wrap;
       }
 
-      &--blue:nth-child(3) {
+      &--blue:nth-child(1)::before,
+      &--blue:nth-child(1)::after {
+        display: none;
+      }
+
+      &--blue:nth-child(2) {
         flex-direction: row-reverse;
       }
 
@@ -247,7 +308,8 @@
         .width(100%);
 
         & .advantages__title--city {
-          margin-top: -17px;
+          .reset();
+          margin-top: -10px;
         }
       }
     }
@@ -255,6 +317,16 @@
     &__img {
       min-width: 512px;
     }
+  }
+
+  .advantages__item--grey:nth-child(2) > .advantages__description--city {
+    width: 244px;
+    margin: 0 auto;
+  }
+
+  .advantages__item--grey:nth-child(3) > .advantages__description--city {
+    width: 220px;
+    margin: 0 auto;
   }
 }
 
@@ -272,21 +344,22 @@
 
     &__title--live {
       .reset();
-      padding-top: 62px;
+      padding-top: 146px;
       width: 106px;
     }
 
     &__icon {
+      position: absolute;
       top: 49px;
-      left: 0;
-      transform: scale(1.06);
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &__description--live {
       .reset();
       width: 285px;
-      padding-top: 16px;
-      padding-bottom: 80px;
+      padding-top: 22px;
+      padding-bottom: 68px;
     }
 
     &__description--city {
@@ -303,7 +376,35 @@
     width: 216px;
   }
 
-  .advantages__container--grey .advantages__title--city {
-    margin-top: -34px;
+  .advantages__description--city:nth-child(3) {
+    width: 304px;
+  }
+
+  .advantages__item--blue:nth-child(2) .advantages__description--city:nth-child(3) {
+    width: 270px;
+  }
+
+  .advantages__container--blue > .advantages__title--city {
+    margin-top: 50px;
+  }
+
+  .advantages__container--grey  .advantages__title--city {
+    margin-top: -23px;
+  }
+/*
+  .advantages__item--grey:nth-child(1) > .advantages__description--city {
+    width: 324px;
+    margin: 0 auto;
+  }
+
+  .advantages__item--grey:nth-child(2) > .advantages__description--city {
+    width: 324px;
+    margin: 0 auto;
+  } */
+
+  .advantages__item--grey:nth-child(n) > .advantages__description--city {
+    width: 324px;
+    margin: 0 auto;
+    padding-top: 6px;
   }
 }

@@ -46,8 +46,8 @@
     <picture>
       <source srcset="img/bg-back-desktop@1x.jpg" media="(min-width: 1200px)">
       <source srcset="img/bg-back-tablet@1x.jpg" media="(min-width: 768px)">
-      <source srcset="img/bg-back-mobile@1x.jpg" type="">
-      <img class="page-main__back-image--back" srcset="img/bg-back-mobile@1x.jpg" alt="mobil" >
+      <source srcset="img/bg-back-mobile@1x_cut-index.jpg" type="">
+      <img class="page-main__back-image--back" srcset="img/bg-back-mobile@1x_cut-index.jpg" alt="mobil" >
     </picture>
     <svg class="page-main__back-image--full-text"><use xlink:href="img/sprite.svg#full-text"></use></svg>
     <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#triangle-mobile"></use></svg>
@@ -55,14 +55,13 @@
     <svg class="page-main__triangle--desktop"><use xlink:href="img/sprite.svg#triangle-desktop"></use></svg>
     </div>
     <section class="advantages">
-      <h2 class="advantages__title advantages__title--reason">СЕДОНА&#8211;небольшой  городок в АРИЗОНЕ,  заслуживающий большего!</h2>
+      <h2 class="advantages__title advantages__title--reason">СЕДОНА &ndash; небольшой  городок в АРИЗОНЕ,  заслуживающий большего!</h2>
       <p class="advantages__description advantages__description--reason">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ul class="advantages__list" >
-        <svg class="advantages__triangle--mobile"><use xlink:href="img/sprite.svg#triangle-mobile"></use></svg>
         <li class="advantages__item advantages__item--blue">
           <div class="advantages__container advantages__container--blue">
             <h3 class="advantages__title advantages__title--city">Настоящий городок</h3>
-            <p class="advantages__description advantages__description--city">- №1 -</p>
+            <p class="advantages__description advantages__description--city"> — №1 —</p>
             <p class="advantages__description advantages__description--city">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <picture>
@@ -74,7 +73,7 @@
           <ul class="advantages__list advantages__list--live">
             <li class="advantages__item advantages__item--live">
               <h3 class="advantages__title advantages__title--live">
-                <svg class="advantages__icon" width="74.695px" height="72.346px">
+                <svg class="advantages__icon advantages__icon--house" width="74.695px" height="72.346px">
                 <use xlink:href="img/sprite.svg#house"></use>
                 </svg>
                 Жилье
@@ -83,7 +82,7 @@
             </li>
             <li class="advantages__item advantages__item--live">
               <h3 class="advantages__title advantages__title--live">
-                <svg class="advantages__icon" width="63px" height="75.084px">
+                <svg class="advantages__icon advantages__icon--gift" width="63px" height="75.084px">
                 <use xlink:href="img/sprite.svg#gift"></use>
                 </svg>
                 Сувениры
@@ -92,9 +91,9 @@
             </li>
             <li class="advantages__item advantages__item--live">
               <h3 class="advantages__title advantages__title--live">
-                <svg class="advantages__icon" width="76.166px" height="68.959px"><use xlink:href="img/sprite.svg#burger"></use></svg>
+                <svg class="advantages__icon advantages__icon--burger" width="76.166px" height="68.959px"><use xlink:href="img/sprite.svg#burger"></use></svg>
                 Еда</h3>
-                <p class="advantages__description advantages__description--live" >Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                <p class="advantages__description advantages__description--live" >Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;НЕ разочаруетесь!</p>
             </li>
           </ul>
         </li>
@@ -120,12 +119,12 @@
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title advantages__title--city">Красивая дорога</h3>
           <p class="advantages__description advantages__description--city">- №4 -</p>
-          <p class="advantages__description advantages__description--city">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="advantages__description advantages__description--city">Ехать в Седону из Лас&nbsp;-&nbsp;Вегаса совсем&nbsp; не&nbsp;скучно!</p>
         </li>
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title advantages__title--city">Мало туристов</h3>
           <p class="advantages__description advantages__description--city">- №5 -</p>
-          <p class="advantages__description advantages__description--city">Большинство едет в Гранд-каньон и толпится там</p>
+          <p class="advantages__description advantages__description--city">Большинство едет в Гранд каньон и толпится там</p>
         </li>
         </div>
       </ul>
@@ -133,7 +132,9 @@
     <section class="search">
       <h2 class="visually-hidden">Поиск гостинницы в городе Седона</h2>
       <p class="search__text search__text--title">Заинтересовались?</p>
-      <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостинниц в Седоне</p>
+      <p class="search__text search__text--mobil">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостинниц в Седоне</p>
+      <p class="search__text search__text--tablet">Укажите предполагаемые даты поездки,</p>
+      <p class="search__text search__text--tablet"> и мы покажем вам лучшие предложения гостинниц в Седоне</p>
       <a class="search__link" href="#">Найти гостинницу</a>
       <div class="search__wrapper">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A81c127610d65adb975a2ec103e6dd77a050f172c9d0fc86385d15c9b8ac7fe71&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>

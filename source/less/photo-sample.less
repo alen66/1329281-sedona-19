@@ -1,4 +1,5 @@
 .photo-sample {
+ /*  box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   .bg-color(@white);
@@ -7,16 +8,24 @@
   &__list {
     list-style: none;
     .reset();
-    padding: 26px 20px 0 20px;
+    padding-top: 26px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  &__item {
+    border-top: 1px solid #f2e9e9;
+  }
+
+  &__item:last-child {
+    border-bottom: 1px solid #f2e9e9;
+  }
+
   &__icon--like {
     fill: #b2b2b2;
     width: 24px;
-    height: 22px;
+    height: 24px;
     margin-right: 10px;
   }
 }
@@ -56,14 +65,13 @@
     text-transform: uppercase;
     padding: 0;
     position: relative;
-    border-bottom: 1px solid #f2e9e9;
     color: inherit;
     padding-bottom: 14px;
   }
 }
 
 .photo-sample__img {
-  margin-top: 25px;
+  margin-top: 23px;
   .bg-color(#ffdc92);
 }
 
@@ -92,17 +100,23 @@
       .reset();
       .mg-auto();
       .width(648px);
-      margin-top: 70px;
+      margin-top: 68px;
     }
 
-    &__item {
+    &__item:nth-child(n) {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
+      border: none;
     }
   }
+
+  .photo-sample__icon--like {
+    margin-right: 6px;
+  }
+
 
   .photo-sample__item:nth-child(1) .photo-sample__img {
     width: 648px;
@@ -121,7 +135,7 @@
     }
 
     &--small {
-      .width(270px);
+      .width(283px);
     }
   }
 
@@ -132,14 +146,27 @@
 
     &--count {
       position: absolute;
-      top: 25px;
-      right: 0;
+      top: 24px;
+      right: 9px;
       border-bottom: none;
     }
   }
+
+  .photo-sample__container--big .photo-sample__text--count {
+    margin-right: -7px;
+  }
+
+  .photo-sample__item:nth-child(3) .photo-sample__text--count {
+    margin-right: 6px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
+  .photo-sample__description {
+    width: 445px;
+  }
+
   .photo-sample__list {
     .width(1200px);
     margin-top: 74px;
@@ -173,7 +200,7 @@
 
   .photo-sample__img {
     width: 400px;
-    height: 270px;
+    height: 267px;
   }
 
   .photo-sample__item:nth-child(1) .photo-sample__img {
@@ -182,17 +209,22 @@
   }
 
   .photo-sample__text {
-    margin-left: 17px;
+    margin-left: 22px;
     margin-right: 17px;
     color: @white;
 
-    &--count > svg {
-      fill: #ffffff;
-      margin-right: 16px;
+    &--count {
+      margin-right: 30px;
     }
   }
 
+  .photo-sample__container--big .photo-sample__text--count {
+    margin-right: 21px;
+  }
+
+
+
   .photo-sample__title {
       padding-top: 110px;
-    }
+  }
 }
