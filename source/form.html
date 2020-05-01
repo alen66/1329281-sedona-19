@@ -10,12 +10,11 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav">
-    <div class="main-nav_wrapper">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item ">
           <a href="index.html">Главная
-            <svg class="site-list__icon--cross"><use xlink:href="img/sprite.svg#cross"></use></svg>
           </a>
         </li>
         <li class="site-list__item">
@@ -46,7 +45,7 @@
       <picture>
       <source srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x" media="(min-width: 1200px)">
       <source srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x" media="(min-width: 768px)">
-      <img class="photo-main__back-image--back" src="img/bg-back-mobile@1x_cut.jpg" srcset="img/bg-back-mobile@2x_cut.jpg 2x" width="768" height="389" alt="Гора Седона">
+      <img class="photo-main__back-image--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" width="768" height="389" alt="Гора Седона">
     </picture>
     <svg class="photo-main__back-image--text"><use xlink:href="img/sprite.svg#text-sedona"></use></svg>
     <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#triangle-mobile"></use></svg>
@@ -57,7 +56,7 @@
       <h2 class="feedback__title">Оставьте свой отзыв</h2>
       <p class="feedback__text">Помогите нашим отелям стать лучше!
       Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
-      <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru">
+      <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru" novalidate>
         <fieldset class="response__user">
           <legend class="response__legend">Представьтесь:</legend>
           <div class="response__container ">
@@ -81,7 +80,7 @@
             <div class="response__wrapper response__wrapper--contact">
               <label class="response__label" for="phone"><span class="response-none"> Контактный</span> телефон:*</label>
               <span class="response__icon">
-                <input type="tel" name="phone" id="phone" pattern="2-[0-9]{3}-[0-9]{3}" placeholder="Введите телефон" required="">
+                <input type="tel" name="phone" id="phone" pattern="+7 ([0-9]{10})" placeholder="Введите телефон" required="">
               </span>
             </div>
             <div class="response__wrapper response__wrapper--contact">
@@ -171,12 +170,13 @@
         </svg>
       </a>
   </footer>
-  <div class="visually-hidden form-error">
+  <div class="form-error">
     <p class="form-error__title">Что-то пошло не так!</p>
     <p class="form-error__text">
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
     </p>
-    <button class='form-error__btn' type="submit"  value="Отправить">Отправить отзыв</button>
+    <button class='form-error__btn' type="submit"  value="Отправить">ок</button>
   </div>
-</body>
+  <script src="js/script.js" ></script>
+  </body>
 </html>
