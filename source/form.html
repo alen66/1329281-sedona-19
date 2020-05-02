@@ -43,6 +43,9 @@
     <div class="photo-main__wrapper">
       <h1 class="visually-hidden">Отзыв об отелях в Седоне</h1>
       <picture>
+      <source type="image/webp" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x" media="(min-width: 1200px)">
+      <source type="image/webp" srcset="img/bg-back-tablet@1x.webp 1x, img/bg-back-tablet@2x.webp 2x" media="(min-width: 768px)">
+      <source type="image/webp" srcset="img/bg-back-mobile@1x_cut-index.webp, img/bg-back-mobile@2x_cut-index.webp 2x">
       <source srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x" media="(min-width: 1200px)">
       <source srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x" media="(min-width: 768px)">
       <img class="photo-main__back-image--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" width="768" height="389" alt="Гора Седона">
@@ -56,17 +59,18 @@
       <h2 class="feedback__title">Оставьте свой отзыв</h2>
       <p class="feedback__text">Помогите нашим отелям стать лучше!
       Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
-      <form class="feedback__form response" method="post" action="https://echo.htmlacademy.ru" novalidate>
+    <!--   https://echo.htmlacademy.ru method="post" -->
+      <form class="feedback__form response"  action="#" novalidate>
         <fieldset class="response__user">
           <legend class="response__legend">Представьтесь:</legend>
           <div class="response__container ">
             <div class="response__wrapper response__wrapper--user">
               <label class="response__label" for="firstname">Имя*:</label>
-              <input type="text" name="firstname" id="firstname" placeholder="Петр" required="">
+              <input class="firstname field" type="text" name="firstname" id="firstname" placeholder="Петр" required="">
             </div>
             <div class="response__wrapper response__wrapper--user">
               <label class="response__label" for="surname">Фамилия*:</label>
-              <input type="text" name="surname" id="surname" placeholder="Иванов" required="">
+              <input class="surname field" type="text" name="surname" id="surname" placeholder="Иванов" required="">
             </div>
             <div class="response__wrapper response__wrapper--user">
               <label class="response__label" for="middlename">Отчество:</label>
@@ -80,13 +84,13 @@
             <div class="response__wrapper response__wrapper--contact">
               <label class="response__label" for="phone"><span class="response-none"> Контактный</span> телефон:*</label>
               <span class="response__icon">
-                <input type="tel" name="phone" id="phone" pattern="+7 ([0-9]{10})" placeholder="Введите телефон" required="">
+                <input class="phone field" type="tel" name="phone" id="phone" pattern="+7 ([0-9] 0})" placeholder="Введите телефон" required="">
               </span>
             </div>
             <div class="response__wrapper response__wrapper--contact">
               <label class="response__label" for="email">Электронная почта:*</label>
               <span class="response__icon response__icon--email">
-                <input type="email" name="email" id="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Введите e-mail" required="">
+                <input class="email field" type="email" name="email" id="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Введите e-mail" required="">
               </span>
             </div>
           </div>
@@ -176,6 +180,13 @@
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
     </p>
     <button class='form-error__btn' type="submit"  value="Отправить">ок</button>
+  </div>
+  <div class="form-letter">
+    <p class="form-letter__title">Ваш отзыв отправлен!</p>
+    <p class="form-letter__text">
+      Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
+    </p>
+    <button class='form-letter__btn' type="submit"  value="Отправить">ок</button>
   </div>
   <script src="js/script.js" ></script>
   </body>
