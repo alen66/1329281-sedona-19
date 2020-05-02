@@ -1,7 +1,7 @@
-.form-error {
+.form-letter {
   display: none;
   width: 320px;
-  height: 280px;
+  height: 330px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12,10 +12,9 @@
 
   &__title {
     .font-base(@fontBold; 18px; 26px;700);
-    width: 200px;
+    width: 210px;
     .mg-auto();
     padding: 40px 0 30px;
-    text-align: center;
   }
 
   &__text {
@@ -39,32 +38,33 @@
   }
 }
 
-.modal-show {
+.modal-letter {
   display: block;
 }
 
 @media (min-width: @tablet-width) {
-  .form-error {
-    width: 400px;
-    height: 350px;
+  .form-letter {
+    width: 648px;
+    height: 347px;
     top: 50%;
     left: 50%;
 
     &__title {
-    width: 220px;
+    width: 350px;
     .font-base(@fontBold; 30px; 40px;700);
     .mg-auto();
     padding: 40px 0 30px;
     }
 
     &__text {
-      width: 280px;
+      width: 420px;
      padding-bottom: 25px;
     }
 
     &__btn {
-      width: 280px;
+      width: 458px;
     .font-base(@fontBold; 21px; 26px;700);
+    margin-top: 43px;
     }
   }
 }
