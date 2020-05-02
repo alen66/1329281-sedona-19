@@ -14,29 +14,29 @@ var email = document.querySelector(".email");
 var fields = document.querySelectorAll('.field')
 
 if (open) {open.addEventListener("click", function (evt) {
-form.addEventListener('submit', function (event) {
-  event.preventDefault()
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
 
-  var error=false;
+    var error=false;
 
-  for (var i = 0; i < fields.length; i++) {
-    if (!fields[i].value) {
-      console.log('field is blank', fields[i]);
+    for (var i = 0; i < fields.length; i++) {
+      if (!fields[i].value) {
+        console.log('field is blank', fields[i]);
 
-      error=true;
-      fields[i].classList.add('error');
-      modal.classList.add("modal-show");
+        error=true;
+        fields[i].classList.add('error');
+        modal.classList.add("modal-show");
+      }
     }
-  }
 
 
-  if (error){
-    modal.classList.add("modal-show")}
+    if (error){
+      modal.classList.add("modal-show")}
       else {
-      modal__letter.classList.add("modal-letter");
+        modal__letter.classList.add("modal-letter");
       }
 
-})
+    })
 }
 )};
 
@@ -44,21 +44,21 @@ form.addEventListener('submit', function (event) {
   close.addEventListener("click", function (evt) {
     modal.classList.remove("modal-show");
   });
-close__letter.addEventListener("click", function (evt) {
+  close__letter.addEventListener("click", function (evt) {
     modal__letter.classList.remove("modal-letter");
   });
 
 
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
 
-navMain.classList.remove('main-nav--nojs');
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
+  navMain.classList.remove('main-nav--nojs');
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
