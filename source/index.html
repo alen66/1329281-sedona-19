@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -28,15 +35,17 @@
         </li>
       </ul>
     </div>
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    </nav>
+    <svg class="main-nav__toggle"><use xlink:href="img/sprite.svg#icon-cross"></use>
+    </svg>
+    <svg class="main-nav__toggle--icon"><use xlink:href="img/sprite.svg#icon-menu"></use></svg>
     <a class="page-header__logo">
-    <picture>
-      <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-      <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-    </picture>
+      <picture>
+        <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+        <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg"  alt="Логотип Седона">
+      </picture>
     </a>
+    </nav>
     </header>
   <main class="page-main">
     <h1 class="visually-hidden">Путешествие в Седона - город в Аризоне</h1>
@@ -61,7 +70,7 @@
         <li class="advantages__item advantages__item--blue">
           <div class="advantages__container advantages__container--blue">
             <h3 class="advantages__title advantages__title--city">Настоящий городок</h3>
-            <p class="advantages__description advantages__description--city"> — №1 —</p>
+            <p class="advantages__description advantages__description--city"> &ndash; №1 &ndash;</p>
             <p class="advantages__description advantages__description--city">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <picture>
@@ -101,8 +110,8 @@
         </li>
         <li class="advantages__item advantages__item--blue">
           <div class="advantages__container advantages__container--blue">
-            <h3 class="advantages__title advantages__title--city">Там есть мост дьявола</h3>
-            <p class="advantages__description advantages__description--city">- №2 -</p>
+            <h3 class="advantages__title advantages__title--city">Там есть мост&nbsp; дьявола</h3>
+            <p class="advantages__description advantages__description--city">&ndash; №2 &ndash;</p>
             <p class="advantages__description advantages__description--city">Да, по нему можно пройти, если вы осмелитесь, конечно</p>
           </div>
           <picture>
@@ -114,23 +123,21 @@
             <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="мост дьвола">
           </picture>
         </li>
-        <div class="advantages__container advantages__container--grey">
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title advantages__title--city">Небольшая площадь</h3>
-          <p class="advantages__description advantages__description--city">- №3 -</p>
-          <p class="advantages__description advantages__description--city">Все интересные места находятся очень близко</p>
+          <p class="advantages__description advantages__description--city">&ndash; №3 &ndash;</p>
+          <p class="advantages__description advantages__description--city">Все интересные места находятся очень&nbsp; близко</p>
         </li>
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title advantages__title--city">Красивая дорога</h3>
-          <p class="advantages__description advantages__description--city">- №4 -</p>
+          <p class="advantages__description advantages__description--city">&ndash; №4 &ndash;</p>
           <p class="advantages__description advantages__description--city">Ехать в Седону из Лас&nbsp;-&nbsp;Вегаса совсем&nbsp; не&nbsp;скучно!</p>
         </li>
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title advantages__title--city">Мало туристов</h3>
-          <p class="advantages__description advantages__description--city">- №5 -</p>
+          <p class="advantages__description advantages__description--city">&ndash; №5 &ndash;</p>
           <p class="advantages__description advantages__description--city">Большинство едет в Гранд каньон и толпится там</p>
         </li>
-        </div>
       </ul>
     </section>
     <section class="search">
@@ -139,9 +146,9 @@
       <p class="search__text search__text--mobil">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостинниц в Седоне</p>
       <p class="search__text search__text--tablet">Укажите предполагаемые даты поездки,</p>
       <p class="search__text search__text--tablet"> и мы покажем вам лучшие предложения гостинниц в Седоне</p>
-      <a class="search__link" href="#">Найти гостинницу</a>
+      <a class="search__link" href="hotelsearch.html">Найти гостинницу</a>
       <div class="search__wrapper">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A81c127610d65adb975a2ec103e6dd77a050f172c9d0fc86385d15c9b8ac7fe71&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+      <iframe class="search__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81c127610d65adb975a2ec103e6dd77a050f172c9d0fc86385d15c9b8ac7fe71&amp;source=constructor" ></iframe>
       <picture>
         <source type="image/webp" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x" media="(min-width: 1200px)">
         <source type="image/webp" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" media="(min-width: 768px)">

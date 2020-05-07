@@ -1,5 +1,5 @@
 .photo-main {
-  width: @width;
+  width: 320px;
   .reset();
   .mg-auto();
 
@@ -7,7 +7,7 @@
     display: block;
     width: 320px;
     position: relative;
-    min-height: 156px;
+    height: 156px;
     overflow: hidden;
   }
 
@@ -34,10 +34,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo-main {
+    width: 768px;
+  }
+
   .photo-main__back-image {
     &--back {
       clip: auto;
-      width: @width;
+      width: 768px;
       height: 518px;
       top: -220px;
       left: 0;
@@ -59,9 +63,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo-main {
+    width: 1200px;
+  }
+
   .photo-main__back-image {
     &--back {
-      width: @width;
+      width: 1200px;
       height: 518px;
       top: -212px;
       left: 0;

@@ -1,5 +1,5 @@
 .advantages {
-  width: @width;
+  width: 320px;
   display: flex;
   flex-direction: column;
   .bg-color(@white);
@@ -166,6 +166,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    width: 768px;
     justify-content: center;
 
     &__skip {
@@ -177,11 +178,13 @@
     }
 
     &__icon {
-      top: 49px;
       left: 0;
+      top: -95px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 75px;
-      height: 72px;
-      position: initial;
+      height: 68px;
+      position: absolute;
       margin-bottom: 16px;
     }
 
@@ -191,10 +194,11 @@
 
     &__list {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
 
       &--live {
-        .width(@width);
+        width: 768px;
         .reset();
         display: flex;
         flex-direction: row;
@@ -210,7 +214,7 @@
 
 
     &__title--reason {
-      .width(@width);
+      width: 768px;
       .font-base(@fontBold; 21px; 26px;700);
       padding: 50px 164px 0;
       min-height: 44px;
@@ -219,13 +223,13 @@
     &__title--live {
       .reset();
       .font-base(@fontBold; 21px; 26px;700);
-      margin-top: 75px;
+      margin-top: 155px;
       width: 107px;
       text-align: center;
     }
 
     &__title--city {
-      width: 151px;
+      width: 155px;
       .font-base(@fontBold; 21px; 26px;700);
       margin-top: 45px;
     }
@@ -243,7 +247,11 @@
 
     &__item--grey > .advantages__description--city:nth-child(2) {
       padding-bottom: 15px;
-      padding-top: 10px;
+      padding-top: 8px;
+    }
+
+    &__item--grey > .advantages__title {
+      padding-top: 0;
     }
 
     &__description--live {
@@ -272,10 +280,9 @@
       }
 
       &--grey {
-        width: calc(@width/3);
+        width: calc(768px/3);
         flex-direction: column;
-        min-height: 260px;
-        justify-content: center;
+        height: 260px;
         align-items: center;
       }
 
@@ -284,7 +291,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: calc(@width/3);
+        width: calc(768px/3);
 
         &:nth-child(2) {
           order: 3;
@@ -325,13 +332,25 @@
   }
 
   .advantages__item--grey:nth-child(3) > .advantages__description--city {
-    width: 220px;
+    width: 219px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages {
+    width: 1200px;
+
+    &__list--live {
+      width: 1200px;
+    }
+
+    &__item {
+      &--live, &--grey {
+        width: 400px;
+      }
+    }
+
     &__img {
       width: 800px;
       height: 256px;
@@ -367,7 +386,7 @@
     }
 
     &__title--reason {
-      .width(@width);
+      width: 1200px;
       .pad(378px);
     }
   }

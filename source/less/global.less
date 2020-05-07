@@ -5,16 +5,18 @@
 
 .font(@fontName; @urlName; @weight: normal; @style: normal) {
   font-family: "@{fontName}", sans-serif;
-  src: url("../fonts/@{urlName}.woff") format("woff"), url("../fonts/@{urlName}.woff2") format("woff2");
+  src: url("../fonts/@{urlName}.woff2") format("woff2"), url("../fonts/@{urlName}.woff") format("woff");
   font-weight: @weight;
   font-style: @style;
+  font-display: swap;
 }
 
 .font-base(@fontName;@fontSize;@font-height;@font-weight) {
-  font-family: @fontName;
+  font-family: @fontName, "Tahoma", sans-serif;
   font-size: @fontSize;
   line-height: @font-height;
   font-weight: @font-weight;
+  font-display: swap;
 }
 
 @font-face {
@@ -109,6 +111,10 @@
     color: #94b8d2;
     fill: #88b6d1;
   }
+
+  &:disabled {
+
+  }
 }
 
 .black-action() {
@@ -120,7 +126,7 @@
   &:active {
     background-color: inherit;
     color: inherit;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }
 
@@ -135,7 +141,7 @@
 
   &:active {
     color: #766357;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }
 
@@ -151,10 +157,13 @@
 body {
   min-width: @width;
   .reset();
-  .bg-color(#452800);
+  .bg-color(#ffffff);
   .font-base(@fontRegular;18px;40px;400);
   .color(@black);
   text-transform: uppercase;
+  max-width: 1200px;
+  .mg-auto();
+  .bg-color(#524689);
 }
 
 img {

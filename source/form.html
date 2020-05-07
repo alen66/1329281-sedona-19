@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -28,16 +35,18 @@
         </li>
       </ul>
     </div>
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    </nav>
-    <a class="page-header__logo">
+    <svg class="main-nav__toggle"><use xlink:href="img/sprite.svg#icon-cross"></use>
+    </svg>
+    <svg class="main-nav__toggle--icon"><use xlink:href="img/sprite.svg#icon-menu"></use></svg>
+    <a class="page-header__logo" href="index.html">
     <picture>
       <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
       <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-      <source srcset="img/logo-sedona-mobile.svg" type="">
-      <img class="page-header__logo-image" srcset="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+      <source srcset="img/logo-sedona-mobile.svg">
+      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
     </picture>
     </a>
+    </nav>
     </header>
   <main class="form-main">
     <div class="photo-main__wrapper">
@@ -58,11 +67,13 @@
     <section class="feedback">
       <h2 class="feedback__title">Оставьте свой отзыв</h2>
       <p class="feedback__text">Помогите нашим отелям стать лучше!
-      Оставьте отзыв оних, а также о посещенных вами достопримечательностях</p>
+      Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     <!--   https://echo.htmlacademy.ru method="post" -->
-      <form class="feedback__form response"  action="#" novalidate>
+      <form class="feedback__form response"  action="https://echo.htmlacademy.ru" method="post" formnovalidate>
         <fieldset class="response__user">
-          <legend class="response__legend">Представьтесь:</legend>
+          <div class="response__box response__box--user">
+            <legend class="response__legend">Представьтесь:</legend>
+          </div>
           <div class="response__container ">
             <div class="response__wrapper response__wrapper--user">
               <label class="response__label" for="firstname">Имя*:</label>
@@ -79,12 +90,14 @@
           </div>
         </fieldset>
         <fieldset class="response__contact">
-          <legend class="response__legend">Контактная информация</legend>
+           <div class="response__box response__box--contact">
+             <legend class="response__legend">Контактная информация</legend>
+           </div>
           <div class="response__container response__container--contact">
             <div class="response__wrapper response__wrapper--contact">
               <label class="response__label" for="phone"><span class="response-none"> Контактный</span> телефон:*</label>
               <span class="response__icon">
-                <input class="phone field" type="tel" name="phone" id="phone" pattern="+7 ([0-9] 0})" placeholder="Введите телефон" required="">
+                <input class="phone field" type="tel" name="phone" id="phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="Введите телефон" required="">
               </span>
             </div>
             <div class="response__wrapper response__wrapper--contact">
@@ -96,7 +109,9 @@
           </div>
         </fieldset>
         <fieldset class="response__comment">
-          <legend class="response__legend">Ваше общее впечатление</legend>
+          <div class="response__box response__box--comment">
+            <legend class="response__legend">Ваше общее впечатление</legend>
+          </div>
           <div class="response__container ">
             <div class="response__wrapper response__wrapper--comment">
               <input type="radio" name="comment" id="comment1" checked>
@@ -113,7 +128,9 @@
           </div>
         </fieldset>
         <fieldset class="response__place">
+          <div class="response__box response__box--place">
           <legend class="response__legend">Посещенные достопримечательности:</legend>
+          </div>
           <div class="response__container">
             <div class="response__wrapper response__wrapper--place">
               <input type="checkbox" name="place1" id="place1" checked>
@@ -134,7 +151,9 @@
           </div>
         </fieldset>
         <fieldset class="response__write">
-          <legend class="response__legend">Опишите свои эмоции:</legend>
+          <div class="response__box response__box--write">
+            <legend class="response__legend">Опишите свои эмоции:</legend>
+          </div>
           <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
         </fieldset>
         <button class='response__btn' type="submit"  value="Отправить">Отправить отзыв</button>
