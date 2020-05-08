@@ -1,12 +1,12 @@
 .page-main {
-  .width(@width);
+  width: 320px;
   .reset();
   .mg-auto();
 
   &__wrapper {
     display: block;
     position: relative;
-    min-height: 389px;
+    height: 389px;
     overflow: hidden;
   }
 
@@ -19,9 +19,10 @@
 
   &__triangle--mobile {
     position: absolute;
-    bottom: -62px;
+    bottom: 0;
     width: 320px;
     fill: #ffffff;
+    height: 26px;
   }
 
   &__triangle--tablet,
@@ -48,17 +49,16 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    .width(@width);
+    width: 768px;
 
     &__wrapper {
       .mg-auto();
-      .width(@width);
-      min-height: 518px;
+      width: 768px;
+      height: 518px;
     }
 
     &__back-image--back {
-      min-height: 518px;
-      clip: rect(0 768px 745px 0);
+      height: 518px;
     }
 
     &__back-image--full-text {
@@ -75,7 +75,6 @@
       right: 0;
       width: 768px;
       height: 57px;
-      fill: #ffffff;
     }
 
     &__triangle--mobile {
@@ -86,9 +85,15 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
+    width: 1200px;
+
+    &__wrapper {
+      width: 1200px;
+    }
+
     &__back-image--back {
-      min-height: 518px;
-      clip: rect(0 1200px 518px 0);
+      height: 518px;
+      width: 1200px;
     }
 
     &__back-image--full-text {
@@ -99,10 +104,10 @@
     &__triangle--desktop {
       display: block;
       position: absolute;
-      bottom: -47px;
+      bottom: 0;
       right: 0;
       width: 1200px;
-      fill: #ffffff;
+      height: 57px;
     }
 
     &__triangle--tablet {

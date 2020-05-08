@@ -3,44 +3,57 @@
   flex-direction: column;
   .bg-color(@white);
   .mg-auto();
-  .width(@width);
+  width: 320px;
 }
 
 .page-header__logo {
   display: flex;
   position: relative;
-  min-height: 56px;
+  .bg-color(@white);
+  height: 56px;
   top: 0;
+  .bg-color(@white);
 
   &-image {
     position: absolute;
     z-index: 2;
     right: 50%;
+    top: 0;
     transform: translateX(50%);
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    .width(@width);
+    width: 768px;
     flex-direction: row;
     justify-content: center;
+    position: relative;
 
     &__logo {
       position: absolute;
+      right: 50%;
+      transform: translateX(50%);
       width: 103px;
       z-index: 2;
+      .bg-color(transparent);
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    .width(@width);
+    width: 1200px;
 
     &__logo {
-      top: 22px;
-      transform: scale(1.8);
+      top: 0;
+      width: 187px;
+      height: 96px;
+
+
+      &-image {
+        width: 187px;
+      }
     }
   }
 }

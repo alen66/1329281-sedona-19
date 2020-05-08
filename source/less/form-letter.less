@@ -35,6 +35,18 @@
     color: @white;
     text-transform: uppercase;
     border: none;
+    .blue-action();
+    outline: none;
+
+    &:disabled {
+      .bg-color(#e5e5e5);
+      color: #fdfdfd;
+
+      &:hover {
+        .bg-color(#e5e5e5);
+        color: #fdfdfd;
+      }
+    }
   }
 }
 

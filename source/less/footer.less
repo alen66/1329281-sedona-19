@@ -1,7 +1,7 @@
 .footer {
   .bg-color(@white);
   .mg-auto();
-  width: @width;
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +40,7 @@
 
 @media (min-width: @tablet-width) {
   .footer {
+    width: 768px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -58,6 +59,7 @@
 
 @media (min-width: @desktop-width) {
   .footer {
+    width: 1200px;
     padding: 123px 120px 40px;
     justify-content: space-between;
 

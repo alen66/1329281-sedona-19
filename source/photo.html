@@ -4,40 +4,49 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item ">
-          <a href="index.html">Главная
-          </a>
-        </li>
-        <li class="site-list__item site-list__item--active">
-          <a>Фото и видео</a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html">Форма отзыва</a>
-        </li>
-        <li class="site-list__item">
-          <a href="#">HTML Academy</a>
-        </li>
-      </ul>
-    </div>
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item ">
+            <a href="index.html">Главная
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+      <svg class="main-nav__toggle"><use xlink:href="img/sprite.svg#icon-cross"></use>
+      </svg>
+      <svg class="main-nav__toggle--icon"><use xlink:href="img/sprite.svg#icon-menu"></use></svg>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+          </picture>
+      </a>
     </nav>
-    <a class="page-header__logo">
-    <picture>
-      <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-      <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
-    </picture>
-    </a>
-    </header>
+  </header>
   <main class="photo-main">
     <div class="photo-main__wrapper">
       <h1 class="visually-hidden">Фотографии и видео Седоны</h1>
@@ -50,9 +59,9 @@
         <img class="photo-main__back-image--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" width="768" height="389" alt="">
       </picture>
       <svg class="photo-main__back-image--text"><use xlink:href="img/sprite.svg#text-sedona"></use></svg>
-      <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#triangle-mobile"></use></svg>
-      <svg class="page-main__triangle--tablet"><use xlink:href="img/sprite.svg#triangle-tablet"></use></svg>
-      <svg class="page-main__triangle--desktop"><use xlink:href="img/sprite.svg#triangle-desktop"></use></svg>
+      <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#bg-intro-triangle-mobile"></use></svg>
+      <svg class="page-main__triangle--tablet"><use xlink:href="img/sprite.svg#bg-intro-triangle-tablet"></use></svg>
+      <svg class="page-main__triangle--desktop"><use xlink:href="img/sprite.svg#bg-intro-triangle-desktop"></use></svg>
     </div>
     <section class="photo-sample">
       <h2 class="photo-sample__title">Фото и видео</h2>
@@ -66,16 +75,18 @@
               <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp, img/photo-sunset-mobile@2x.webp 2x">
               <source srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x" media="(min-width: 1200px)">
               <source srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="photo-sample__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Неродные просторы " border="0">
+              <img class="photo-sample__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Неродные просторы ">
             </picture>
           </a>
           <div class="photo-sample__container photo-sample__container--big">
-            <p class="photo-sample__text photo-sample__text--title">Неродные просторы
-            <p class="photo-sample__text">Автор фото: Борис</p>
-            <p class="photo-sample__text photo-sample__text--count">
-              <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#like"></use></svg>
-              1350
-            </p>
+            <div class="photo-sample__wrapper--text">
+              <p class="photo-sample__text photo-sample__text--title">Неродные просторы
+              <p class="photo-sample__text">Автор фото: Борис</p>
+            </div>
+            <div class="photo-sample__wrapper--like">
+              <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+              <p class="photo-sample__text photo-sample__text--count">1350</p>
+            </div>
           </div>
         </li>
         <li class="photo-sample__item">
@@ -86,16 +97,18 @@
               <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp, img/photo-cactus-mobile@2x.webp 2x">
               <source srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x" media="(min-width: 1200px)">
               <source srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="photo-sample__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Местная растительность " border="0">
+              <img class="photo-sample__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Местная растительность ">
             </picture>
           </a>
           <div class="photo-sample__container photo-sample__container--small">
-          <p class="photo-sample__text photo-sample__text--title">Местная растительность</p>
-          <p class="photo-sample__text"> Автор фото: Сергей</p>
-          <p class="photo-sample__text photo-sample__text--count">
-            <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#like"></use></svg>
-            143
-            </p>
+            <div class="photo-sample__wrapper--text">
+              <p class="photo-sample__text photo-sample__text--title">Местная растительность</p>
+              <p class="photo-sample__text"> Автор фото: Сергей</p>
+            </div>
+            <div class="photo-sample__wrapper--like">
+              <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+              <p class="photo-sample__text photo-sample__text--count">143</p>
+            </div>
           </div>
         </li>
         <li class="photo-sample__item">
@@ -110,11 +123,14 @@
             </picture>
           </a>
           <div class="photo-sample__container photo-sample__container--small">
-          <p class="photo-sample__text photo-sample__text--title">Дорога на север</p>
-          <p class="photo-sample__text"> Автор фото: Петр</p>
-          <p class="photo-sample__text photo-sample__text--count">
-            <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#like"></use></svg>
-            96</p>
+            <div class="photo-sample__wrapper--text">
+              <p class="photo-sample__text photo-sample__text--title">Дорога на север</p>
+              <p class="photo-sample__text"> Автор фото: Петр</p>
+            </div>
+            <div class="photo-sample__wrapper--like">
+              <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+              <p class="photo-sample__text photo-sample__text--count">96</p>
+            </div>
           </div>
         </li>
         <li class="photo-sample__item">
@@ -125,16 +141,18 @@
               <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp, img/photo-bridge-mobile@2x.webp 2x">
               <source srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" media="(min-width: 1200px)">
               <source srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x" media="(min-width: 768px)">
-              <img class="photo-sample__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Мост дьявола" border="0">
+              <img class="photo-sample__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография Мост дьявола">
             </picture>
           </a>
           <div class="photo-sample__container photo-sample__container--small">
-          <p class="photo-sample__text photo-sample__text--title">Мост дьявола</p>
-          <p class="photo-sample__text"> Автор фото: Антон</p>
-          <p class="photo-sample__text photo-sample__text--count">
-            <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#like"></use></svg>
-            254
-          </p>
+            <div class="photo-sample__wrapper--text">
+              <p class="photo-sample__text photo-sample__text--title">Мост дьявола</p>
+              <p class="photo-sample__text"> Автор фото: Антон</p>
+            </div>
+            <div class="photo-sample__wrapper--like">
+              <svg class="photo-sample__icon--like"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+              <p class="photo-sample__text photo-sample__text--count">254</p>
+            </div>
           </div>
         </li>
       </ul>
@@ -153,9 +171,9 @@
         </picture>
       </div>
       <div class="video__wrapper video__wrapper--icons">
-        <svg class="video__icon video__icon--replay"><use xlink:href="img/sprite.svg#replay"></use></svg>
-        <svg class="video__icon video__icon--subtitles"><use xlink:href="img/sprite.svg#subtitles"></use></svg>
-        <svg class="video__icon video__icon--fullscreen"><use xlink:href="img/sprite.svg#fullscreen"></use></svg>
+        <svg class="video__icon video__icon--replay"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg>
+        <svg class="video__icon video__icon--subtitles"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg>
+        <svg class="video__icon video__icon--fullscreen"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
         <span class="video__container">
           <input class="video__range" min="1" max="542" value="116" type="range">
         </span>
@@ -169,21 +187,21 @@
           <li class="social__item">
             <a class="social__link" href="#" title="Наша страница на Twitter">
               <svg class="social__icon">
-              <use xlink:href="img/sprite.svg#twitter"></use>
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
             </a>
           </li>
           <li class="social__item">
             <a  class="social__link" href="#" title="Наша страница в Facebook">
               <svg class="social__icon social__icon--facebook">
-                <use xlink:href="img/sprite.svg#facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a  class="social__link" href="#" title="Наша страница на YouTube">
               <svg class="social__icon">
-                <use xlink:href="img/sprite.svg#youtube"></use>
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -191,7 +209,7 @@
       </div>
       <a class="footer__link footer__link--developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
         <svg class="footer__icon">
-          <use xlink:href="img/sprite.svg#academy-logo"></use>
+          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
         </svg>
       </a>
   </footer>

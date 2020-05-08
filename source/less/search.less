@@ -10,20 +10,24 @@
     color: @white;
     background-color: #81b3d2;
     .font-base(@fontBold; 21px; 26px;700);
-    letter-spacing: -1px;
     .reset();
     .mg-auto();
     width: 280px;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-    margin-top: 35px;
-    margin-bottom: 49px;
+    margin-top: 32px;
+    margin-bottom: 47px;
     .blue-action();
 
     :disabled {
       .bg-color(#e5e5e5);
       color: #fdfdfd;
+
+      &:hover {
+        .bg-color(#e5e5e5);
+        color: #fdfdfd;
+      }
     }
   }
 }
@@ -31,7 +35,8 @@
 .search__text {
   .reset();
   .font-base(@fontRegular; 14px; 24px;400);
-  padding: 22px 20px 0;
+  width: 320px;
+  padding: 24px 20px 0;
   text-align: center;
   color: #333333;
 
@@ -54,13 +59,15 @@
 
 .search__wrapper {
   display: block;
-  width: @width;
+  width: 320px;
   height: 350px;
   position: relative;
 
   iframe {
     position: absolute;
     height: 350px;
+    width: 100%;
+    border: none;
     z-index: 2;
     top: 0;
     left: 0;
@@ -68,6 +75,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .search__wrapper {
+    width: 768px;
+    margin-bottom: -53px;
+  }
+
   .search__text {
     width: 456px;
     padding-top: 49px;
@@ -96,20 +108,21 @@
   }
 
   .search__map {
-    .width(@width);
-  }
-
-  .search__wrapper {
-    margin-bottom: -53px;
+    width: 768px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .search__wrapper {
     margin-bottom: -90px;
+    width: 1200px;
   }
 
   .search__link {
     margin-top: 48px;
+  }
+
+  .search__map {
+    width: 1200px;
   }
 }
