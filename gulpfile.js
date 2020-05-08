@@ -91,26 +91,32 @@ gulp.task("build", gulp.series(
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
-    notify: false,
+    server: "build/",
+ /*   notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false*/
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+});
+
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
 });
 
 gulp.task("start", gulp.series("css", "server"));
 
 var server1 = require('gulp-server-livereload');
 
-gulp.task('default', function() {
+/*gulp.task('default', function() {
   gulp.src('source/')
     .pipe(server1({
       livereload: true,
       directoryListing: false,
       open: false
     }));
-});
+});*/
