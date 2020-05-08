@@ -66,5 +66,3 @@ if (open) {open.addEventListener("click", function (evt) {
       navMain.classList.add('main-nav--closed');
     }
   });
-
-
