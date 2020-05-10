@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin");
 
 
 gulp.task("css", function () {
@@ -48,11 +49,11 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/**/*.svg")
+  return gulp.src("source/img/**/{icon-*,bg-*,logo-html*,text-*}.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename("sprite1.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
 });
 
@@ -61,37 +62,51 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build/"));
 });
 
 gulp.task("clean", function () {
   return del("build");
 });
 
+var uglify = require('gulp-uglify');
+
+gulp.task('minjs', function(){
+  return gulp.src([
+    "source/js/*.js"
+  ])
+  .pipe(uglify())
+  .pipe(gulp.dest('build/js/'));
+});
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
+    "source/img/*.{png,jpg,webp}",
+    "source/img/logo-*.svg",
+    "source/img/icon-bg-*.svg",
+    "source/*.ico",
     ], {
       base: "source"
     })
     .pipe(gulp.dest("build"));
 });
 
+
 gulp.task("build", gulp.series(
 "clean",
+"sprite",
 "copy",
 "css",
-"sprite",
-"html"
+"html",
+"minjs",
   ));
 
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -103,14 +118,3 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
-
-var server1 = require('gulp-server-livereload');
-
-gulp.task('default', function() {
-  gulp.src('source/')
-    .pipe(server1({
-      livereload: true,
-      directoryListing: false,
-      open: false
-    }));
-});
