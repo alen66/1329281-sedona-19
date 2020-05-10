@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
@@ -16,11 +15,14 @@
   <script src="js/svgxuse.js" async></script>
 </head>
 <body>
+  <div style="display: none;">
+    <include src="source/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item ">
+        <li class="site-list__item">
           <a href="index.html">Главная
           </a>
         </li>
@@ -52,11 +54,11 @@
     <div class="photo-main__wrapper">
       <h1 class="visually-hidden">Отзыв об отелях в Седоне</h1>
       <picture>
-      <source type="image/webp" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x" media="(min-width: 1200px)">
-      <source type="image/webp" srcset="img/bg-back-tablet@1x.webp 1x, img/bg-back-tablet@2x.webp 2x" media="(min-width: 768px)">
+      <source type="image/webp" srcset="img/bg-back-desktop@1x.webp, img/bg-back-desktop@2x.webp 2x" media="(min-width: 1200px)">
+      <source type="image/webp" srcset="img/bg-back-tablet@1x.webp, img/bg-back-tablet@2x.webp 2x" media="(min-width: 768px)">
       <source type="image/webp" srcset="img/bg-back-mobile@1x_cut-index.webp, img/bg-back-mobile@2x_cut-index.webp 2x">
-      <source srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x" media="(min-width: 1200px)">
-      <source srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x" media="(min-width: 768px)">
+      <source srcset="img/bg-back-desktop@1x.jpg, img/bg-back-desktop@2x.jpg 2x" media="(min-width: 1200px)">
+      <source srcset="img/bg-back-tablet@1x.jpg, img/bg-back-tablet@2x.jpg 2x" media="(min-width: 768px)">
       <img class="photo-main__back-image--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" width="768" height="389" alt="Гора Седона">
     </picture>
     <svg class="photo-main__back-image--text"><use xlink:href="img/sprite.svg#text-sedona"></use></svg>
@@ -68,13 +70,12 @@
       <h2 class="feedback__title">Оставьте свой отзыв</h2>
       <p class="feedback__text">Помогите нашим отелям стать лучше!
       Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-    <!--   https://echo.htmlacademy.ru method="post" -->
-      <form class="feedback__form response"  action="https://echo.htmlacademy.ru" method="post" formnovalidate>
+      <form class="feedback__form response" action="https://echo.htmlacademy.ru" method="post" formnovalidate>
         <fieldset class="response__user">
           <div class="response__box response__box--user">
             <legend class="response__legend">Представьтесь:</legend>
           </div>
-          <div class="response__container ">
+          <div class="response__container">
             <div class="response__wrapper response__wrapper--user">
               <label class="response__label" for="firstname">Имя*:</label>
               <input class="firstname field" type="text" name="firstname" id="firstname" placeholder="Петр" required="">
@@ -112,13 +113,13 @@
           <div class="response__box response__box--comment">
             <legend class="response__legend">Ваше общее впечатление</legend>
           </div>
-          <div class="response__container ">
+          <div class="response__container">
             <div class="response__wrapper response__wrapper--comment">
-              <input type="radio" name="comment" id="comment1" checked>
+              <input type="radio" name="comment" id="comment1" checked="checked">
               <label class="response__label response__label--strong" for="comment1">Скорее положительное</label>
             </div>
             <div class="response__wrapper response__wrapper--comment">
-              <input type="radio" name="comment" id="comment2" >
+              <input type="radio" name="comment" id="comment2">
               <label class="response__label response__label--strong" for="comment2">Скорее отрицательное</label>
             </div>
             <div class="response__wrapper response__wrapper--comment">
@@ -133,15 +134,15 @@
           </div>
           <div class="response__container">
             <div class="response__wrapper response__wrapper--place">
-              <input type="checkbox" name="place1" id="place1" checked>
+              <input type="checkbox" name="place1" id="place1" checked="checked">
               <label class="response__label response__label--strong-place" for="place1">Мост Дьявола</label>
             </div>
             <div class="response__wrapper response__wrapper--place">
-              <input type="checkbox" name="place2" id="place2" checked>
+              <input type="checkbox" name="place2" id="place2" checked="checked">
               <label class="response__label response__label--strong-place" for="place2">Гора-Колокол</label>
             </div>
             <div class="response__wrapper response__wrapper--place">
-              <input type="checkbox" name="place3" id="place3" checked>
+              <input type="checkbox" name="place3" id="place3" checked="checked">
               <label class="response__label response__label--strong-place" for="place3">Слайд-парк</label>
             </div>
             <div class="response__wrapper response__wrapper--place">
@@ -156,7 +157,9 @@
           </div>
           <textarea class="response__textarea" placeholder="Опишите подробно все свои восторги" name="write"></textarea>
         </fieldset>
-        <button class='response__btn' type="submit"  value="Отправить">Отправить отзыв</button>
+        <div class="response__box response__box--button">
+          <button class="response__btn" type="submit" value="Отправить">Отправить отзыв</button>
+        </div>
       </form>
     </section>
   </main>
@@ -172,14 +175,14 @@
             </a>
           </li>
           <li class="social__item">
-            <a  class="social__link" href="#" title="Наша страница в Facebook">
+            <a class="social__link" href="#" title="Наша страница в Facebook">
               <svg class="social__icon social__icon--facebook">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a  class="social__link" href="#" title="Наша страница на YouTube">
+            <a class="social__link" href="#" title="Наша страница на YouTube">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
@@ -198,15 +201,15 @@
     <p class="form-error__text">
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
     </p>
-    <button class='form-error__btn' type="submit"  value="Отправить">ок</button>
+    <button class="form-error__btn" type="submit" value="Отправить">ок</button>
   </div>
   <div class="form-letter">
     <p class="form-letter__title">Ваш отзыв отправлен!</p>
     <p class="form-letter__text">
       Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте
     </p>
-    <button class='form-letter__btn' type="submit"  value="Отправить">ок</button>
+    <button class="form-letter__btn" type="submit" value="Отправить">ок</button>
   </div>
-  <script src="js/script.js" ></script>
+  <script src="js/script.js"></script>
   </body>
 </html>

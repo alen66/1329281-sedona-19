@@ -135,7 +135,7 @@ input[type="checkbox"]:checked + label::before {
   content: "";
   .bg-color(#f2f2f2);
   text-align: center;
-  background-image: url("../img/icon-tick.svg");
+  background-image: url("../img/icon-bg-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -224,11 +224,11 @@ input[type="checkbox"]:checked + label:active::before {
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url("../img/icon-phone.svg");
+    background-image: url("../img/icon-bg-phone.svg");
   }
 
   &--email::after {
-    background-image: url("../img/icon-mail.svg");
+    background-image: url("../img/icon-bg-mail.svg");
   }
 }
 
@@ -355,6 +355,25 @@ input[type="checkbox"]:checked + label:active::before {
     &--user {
       width: 267px;
     }
+
+    &--button {
+      order: 6;
+      margin: 0;
+      position: relative;
+      margin-right: 60px;
+      width: 768px;
+
+      &::after {
+        content: "* – обязательные поля";
+        position: absolute;
+        pointer-events: none;
+        cursor: default;
+        right: 0;
+        top: 78px;
+        color: #333333;
+        .font-base(@fontRegular;14px;26px;400);
+      }
+    }
   }
 
   .response {
@@ -467,17 +486,6 @@ input[type="checkbox"]:checked + label:active::before {
       margin-top: 58px;
       outline: none;
       .blue-action();
-
-      &::after {
-        content: "* - обязательные поля";
-        position: absolute;
-        pointer-events: none;
-        cursor: default;
-        right: -140px;
-        color: #333333;
-        .font-base(@fontRegular;14px;26px;400);
-        margin-right: 200px;
-      }
     }
 
     &_label {
@@ -587,16 +595,6 @@ input[type="checkbox"]:checked + label:active::before {
       margin-top: 61px;
       width: 480px;
       position: relative;
-
-      &::after {
-        content: "* - обязательные поля";
-        position: absolute;
-        right: -677px;
-        top: 16px;
-        color: #333333;
-        .font-base(@fontRegular;14px;26px;400);
-        margin-right: 200px;
-      }
     }
 
     &__wrapper--user {
@@ -690,6 +688,11 @@ input[type="checkbox"]:checked + label:active::before {
         top: 76px;
         right: -342px;
       }
+    }
+
+    &--button {
+      margin-right: 120px;
+      width: 1200px;
     }
   }
 
