@@ -1,20 +1,27 @@
 .response__legend {
+  display: flex;
   .font-base(@fontBold;18px;26px;700);
   padding: 17px 20px 18px 20px;
   margin: 0 auto;
   text-align: center;
+
+  &--contact {
+    padding-bottom: 18px;
+  }
+
+  &--write {
+    padding-top: 11px;
+    padding-bottom: 17px;
+  }
 }
 
-.response__contact > .response__legend {
-  padding-bottom: 26px;
-}
 
-.response__ {
-  &user,
-  &contact,
-  &comment,
-  &place,
-  &write {
+.response {
+  &__user,
+  &__contact,
+  &__comment,
+  &__place,
+  &__write {
     display: flex;
     flex-direction: column;
     border: none;
@@ -23,15 +30,15 @@
     margin-right: 20px;
   }
 
-  &label {
+  &__label {
     .font-base(@fontRegular;14px;21px;400);
     padding-bottom: 0;
     color: #333333;
     text-align: start;
   }
 
-  &label--strong,
-  &label--strong-place {
+  &__label--strong,
+  &__label--strong-place {
     .font-base(@fontBold;18px;26px;700);
     text-transform: none;
     position: relative;
@@ -270,11 +277,16 @@ input[type="checkbox"]:checked + label:active::before {
     .pad(60px;);
   }
 
-  .response__box {
+  .response__legend {
+    .font-base(@fontBold;21px;26px;700);
+    .reset();
     .mg-auto;
+    padding: 54px 0;
 
     &--place {
       width: 280px;
+      padding-top: 23px;
+      padding-bottom: 38px;
       position: relative;
 
       &::before {
@@ -300,7 +312,11 @@ input[type="checkbox"]:checked + label:active::before {
 
     &--write {
       position: relative;
-      width: 280px;
+      width: 256px;
+      padding-bottom: 56px;
+      padding-top: 62px;
+      margin: 0 auto;
+
 
       &::before {
         position: absolute;
@@ -326,6 +342,9 @@ input[type="checkbox"]:checked + label:active::before {
     &--contact {
       width: 280px;
       position: relative;
+      padding-bottom: 9px;
+      padding-top: 54px;
+
 
       &::before {
         position: absolute;
@@ -350,15 +369,19 @@ input[type="checkbox"]:checked + label:active::before {
 
     &--comment {
       width: 270px;
+      text-align: left;
     }
 
     &--user {
       width: 267px;
+      text-align: left;
+      padding-bottom: 57px;
     }
 
     &--button {
       order: 6;
       margin: 0;
+      padding: 0;
       position: relative;
       margin-right: 60px;
       width: 768px;
@@ -382,18 +405,11 @@ input[type="checkbox"]:checked + label:active::before {
     flex-wrap: wrap;
     margin-top: 20px;
 
-    &__legend {
-      .font-base(@fontBold;21px;26px;700);
-      .reset();
-      padding-top: 54px;
-      padding-bottom: 54px;
-    }
-
     &__comment {
       flex-direction: column;
       order: 1;
-      width: 384px;
-      padding-right: 50px;
+      width: 334px;
+      padding-right: 48px;
       position: relative;
 
       &::after {
@@ -403,7 +419,7 @@ input[type="checkbox"]:checked + label:active::before {
         height: 300px;
         background-color: #b2b2b2;
         top: 58px;
-        right: 0;
+        right: -2px;
       }
     }
 
@@ -512,32 +528,6 @@ input[type="checkbox"]:checked + label:active::before {
     width: 175px;
   }
 
-  .response__comment > .response__legend {
-    text-align: start;
-  }
-
-  .response__box--user .response__legend {
-    text-align: start;
-    padding-bottom: 57px;
-  }
-
-  .response__box--place .response__legend {
-    width: 227px;
-    padding-top: 23px;
-    padding-bottom: 38px;
-  }
-
-  .response__box--contact .response__legend {
-    padding-bottom: 9px;
-    padding-top: 54px;
-  }
-
-  .response__box--write .response__legend {
-    padding-bottom: 56px;
-    padding-top: 62px;
-    margin: 0 auto;
-  }
-
   .response__wrapper--contact > .response__label {
     padding-top: 16px;
     padding-bottom: 0;
@@ -632,19 +622,18 @@ input[type="checkbox"]:checked + label:active::before {
     }
   }
 
-  .response__box {
-    .mg-auto;
-
+  .response__legend {
     &--user {
       margin-left: 0;
     }
 
     &--comment {
-      margin-left: 77px;
+      letter-spacing: 0;
+      margin-left: 80px;
     }
 
     &--contact {
-      padding-bottom: 65px;
+      padding-bottom: 74px;
 
       &::before {
         width: 280px;
@@ -660,8 +649,8 @@ input[type="checkbox"]:checked + label:active::before {
     }
 
     &--place {
-      padding-top: 10px;
-      padding-bottom: 4px;
+      padding-top: 35px;
+      padding-bottom: 40px;
 
       &::before {
         width: 280px;
@@ -677,6 +666,8 @@ input[type="checkbox"]:checked + label:active::before {
     }
 
     &--write {
+      padding-bottom: 57px;
+
       &::before {
         width: 280px;
         top: 76px;
@@ -706,25 +697,12 @@ input[type="checkbox"]:checked + label:active::before {
     width: 317px;
   }
 
-  .response__comment > .response__legend {
-    letter-spacing: 0;
-    margin-left: 80px;
-  }
-
-  .response__contact > .response__legend {
-    padding-bottom: 74px;
-  }
-
   .response__wrapper--contact > .response__label {
     display: flex;
     align-items: center;
     margin-right: 15px;
     padding: 0;
     height: 58px;
-  }
-
-  .response__place > .response__legend {
-    padding-bottom: 40px;
   }
 
   .response__container {
@@ -739,9 +717,5 @@ input[type="checkbox"]:checked + label:active::before {
 
   .response__icon {
     margin: 0;
-  }
-
-  .response__write > .response__legend {
-    padding-bottom: 60px;
   }
 }
