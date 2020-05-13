@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
@@ -37,10 +39,10 @@
         </li>
       </ul>
     </div>
-    <svg class="main-nav__toggle"><use xlink:href="img/sprite.svg#icon-cross"></use>
+    <svg aria-label="Кнопка закрытия меню" class="main-nav__toggle main-nav__toggle--cross"><use xlink:href="img/sprite.svg#icon-cross"></use>
     </svg>
-    <svg class="main-nav__toggle--icon"><use xlink:href="img/sprite.svg#icon-menu"></use></svg>
-    <a class="page-header__logo">
+    <svg aria-label="Кнопка открытия меню" class="main-nav__toggle main-nav__toggle--icon"><use xlink:href="img/sprite.svg#icon-menu"></use></svg>
+    <a aria-label="Логотип Седона" class="page-header__logo">
       <picture>
         <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
         <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
@@ -58,12 +60,12 @@
       <source type="image/webp" srcset="img/bg-back-mobile@1x_cut-index.webp 1x, img/bg-back-mobile@2x_cut-index.webp 2x">
       <source srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x" media="(min-width: 1200px)">
       <source srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x" media="(min-width: 768px)">
-      <img class="page-main__back-image--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" alt="Гора Седона" >
+      <img class="page-main__triangle page-main__triangle--back" src="img/bg-back-mobile@1x_cut-index.jpg" srcset="img/bg-back-mobile@2x_cut-index.jpg 2x" alt="Гора Седона" >
     </picture>
-    <svg class="page-main__back-image--full-text"><use xlink:href="img/sprite.svg#text-sedona-index"></use></svg>
-    <svg class="page-main__triangle--mobile"><use xlink:href="img/sprite.svg#bg-intro-triangle-mobile"></use></svg>
-    <svg class="page-main__triangle--tablet"><use xlink:href="img/sprite.svg#bg-intro-triangle-tablet"></use></svg>
-    <svg class="page-main__triangle--desktop"><use xlink:href="img/sprite.svg#bg-intro-triangle-desktop"></use></svg>
+    <svg class="page-main__triangle page-main__triangle--full-text"><use xlink:href="img/sprite.svg#text-sedona-index"></use></svg>
+    <svg class="page-main__triangle page-main__triangle--mobile"><use xlink:href="img/sprite.svg#bg-intro-triangle-mobile"></use></svg>
+    <svg class="page-main__triangle page-main__triangle--tablet"><use xlink:href="img/sprite.svg#bg-intro-triangle-tablet"></use></svg>
+    <svg class="page-main__triangle page-main__triangle--desktop"><use xlink:href="img/sprite.svg#bg-intro-triangle-desktop"></use></svg>
     </div>
     <section class="advantages">
       <h2 class="advantages__title advantages__title--reason">СЕДОНА &ndash; небольшой  городок в АРИЗОНЕ,  заслуживающий большего!</h2>
@@ -148,7 +150,7 @@
       <p class="search__text search__text--mobil">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостинниц в Седоне</p>
       <p class="search__text search__text--tablet">Укажите предполагаемые даты поездки,</p>
       <p class="search__text search__text--tablet"> и мы покажем вам лучшие предложения гостинниц в Седоне</p>
-      <a class="search__link" href="hotelsearch.html">Найти гостинницу</a>
+      <a class="search__link" aria-label="Кнопка поиска гостинницы" href="hotelsearch.html">Найти гостинницу</a>
       <div class="search__wrapper">
       <iframe class="search__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81c127610d65adb975a2ec103e6dd77a050f172c9d0fc86385d15c9b8ac7fe71&amp;source=constructor" ></iframe>
       <picture>
@@ -163,25 +165,25 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__link" href="#">#VisitSedona</a>
+    <a class="footer__link" aria-label="Посетите Седону" href="#">#VisitSedona</a>
       <div class="footer__wrapper social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#" title="Наша страница на Twitter">
+            <a class="social__link" href="#" title="Наша страница на Twitter" aria-label="Наша страница на Twitter">
               <svg class="social__icon">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
             </a>
           </li>
           <li class="social__item">
-            <a  class="social__link" href="#" title="Наша страница в Facebook">
+            <a  class="social__link" href="#" title="Наша страница в Facebook" aria-label="Наша страница в Facebook">
               <svg class="social__icon social__icon--facebook">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a  class="social__link" href="#" title="Наша страница на YouTube">
+            <a  class="social__link" href="#" title="Наша страница на YouTube" aria-label="Наша страница на YouTube">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
@@ -189,7 +191,7 @@
           </li>
         </ul>
       </div>
-      <a class="footer__link footer__link--developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+      <a class="footer__link footer__link--developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт Академии Html" title="сайт Академии Html">Разработано
         <svg class="footer__icon">
           <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
         </svg>

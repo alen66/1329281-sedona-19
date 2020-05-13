@@ -116,6 +116,10 @@ input[name*="name"] {
 input[type="tel"],
 input[type="email"] {
   width: 227px;
+
+  &:focus:invalid {
+    background-color: pink;
+  }
 }
 
 input[type="radio"],

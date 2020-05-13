@@ -21,7 +21,7 @@
     display: none;
   }
 
-  & .main-nav__toggle {
+  & .main-nav__toggle--cross {
     position: absolute;
     top: 16px;
     right: 18px;
@@ -39,12 +39,13 @@
   }
 }
 
+
 .main-nav--closed {
   position: relative;
   .bg-color(@white);
   top: 0;
 
-  & .main-nav__toggle {
+  & .main-nav__toggle--cross {
     display: none;
   }
 
@@ -73,7 +74,7 @@
   }
 
   .main-nav--nojs {
-    & .main-nav__toggle {
+    & .main-nav__toggle--cross {
       display: none;
     }
 
@@ -88,7 +89,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav__toggle--icon {
+  .main-nav__toggle {
     display: none;
   }
 
@@ -110,10 +111,6 @@
       justify-content: center;
       width: 768px;
       margin: 0 auto;
-    }
-
-    &__toggle {
-      display: none;
     }
   }
 }
